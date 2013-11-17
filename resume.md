@@ -1,7 +1,12 @@
 ---
-layout: post-index
+layout: page
 permalink: /resume/index.html
-title: Articles
-tagline: A List of Posts
-tags: [blog, graphic design]
+title: Resume
+tagline: My Resume
+tags: [resume, cv]
 ---
+
+[PDF Version](/assets/resume.pdf)
+
+###
+

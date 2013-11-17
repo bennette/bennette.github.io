@@ -1,8 +1,10 @@
 title:            small data&#58;<br>bigger isn't better
+title2:           Small data
 tagline:          A short tagline
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url:             http://bennette.github.io
+#url:             http://bennette.github.io
+
 
 # Owner/author information
 owner:
@@ -11,14 +13,14 @@ owner:
   bio1:           "Operations Research<br>Data Mining<br>Visualization"
   email:          bennette@iastate.edu
   # Social networking links are used in author-bio sidebar. Update and remove as you like.       
-  #email:
+  email: "bennette@iastate.edu"
   facebook: "wdbennette"      
   stackoverflow: "the goods"
   github:         
   linkedin:       
   instagram:      
   lastfm:         
-  tumblr:
+  tumblr: 
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    
 
