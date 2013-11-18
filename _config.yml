@@ -3,7 +3,7 @@ title2:           Small data
 tagline:          A short tagline
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url:             http://bennette.github.io
+#url:             http://bennette.github.io
 
 
 # Owner/author information
@@ -35,15 +35,12 @@ bing_verify:
 links:
   - title: About
     url: /about
-  - title: Resume
-    url: /resume
   - title: Articles
     url: /articles
-  - title: Theme Setup
-    url: /theme-setup
-  - title: Made Mistakes
-    url: http://mademistakes.com
-    external: true
+  - title: Presentations
+    url: /presentations
+  - title: Resume
+    url: /resume
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
