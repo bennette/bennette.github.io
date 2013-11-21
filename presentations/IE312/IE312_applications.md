@@ -3,7 +3,6 @@ Solving a problem through integer programming
 author: Walter Bennette
 date: 12 - 04 - 2013
 transition: rotate
-<script type="text/javascript" src="bennette.github.io/presentations/IE312/slides_files/mathjax/MathJax.js"></script>
 
 Steps to follow
 ========================================================
