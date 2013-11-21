@@ -22,7 +22,7 @@ incremental: true
 - Joe is upset because he has started having to turn customers away
 - Joe hopes he can earn more money by identifying the correct customers to turn away
 
- ![Here is Joe](IE312_applications-figure/sales-1-300x199.jpg)
+ <!---![Here is Joe](IE312_applications-figure/sales-1-300x199.jpg)--->
 
 Peculiar Car Rental has some peculiar rental practices
 ========================================================
@@ -111,7 +111,7 @@ Example
 ========================================================
  Joe wants us to give it a go!
  
- ![Here is Joe](IE312_applications-figure/used-car-salesman-seo.jpg)
+
 
 
 
@@ -122,7 +122,7 @@ Example
 
 Thanks
 ========================================================
-  ![Here is Joe](IE312_applications-figure/Sleazy_Used_Car_Salesman_Marketing_Copywriting_Guaranteed.jpg)
+
 
 
 
