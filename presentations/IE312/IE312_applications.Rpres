@@ -1,5 +1,5 @@
 
-Solving a problem through integer programming III
+Solving a problem through integer programming IV
 ========================================================
 author: Walter Bennette
 date: 12 - 04 - 2013
