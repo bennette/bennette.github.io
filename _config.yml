@@ -3,7 +3,7 @@ title2:           Small data
 tagline:          A short tagline
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-#url:             http://bennette.github.io
+url:             http://bennette.github.io
 
 
 # Owner/author information
