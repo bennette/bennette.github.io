@@ -1,4 +1,8 @@
-Solving a problem through integer programming
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+Solving a problem through integer programming II
 ========================================================
 author: Walter Bennette
 date: 12 - 04 - 2013
