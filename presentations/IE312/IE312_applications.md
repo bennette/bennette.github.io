@@ -1,5 +1,5 @@
 
-Solving a problem through integer programming VI
+Solving a problem through integer programming
 ========================================================
 author: Walter Bennette
 date: 12 - 04 - 2013
@@ -14,7 +14,6 @@ incremental: true
 4. Decide what makes the best solution
 5. Construct an optimization model
 6. Solve
-7. [mathjax](www.mathjax.org)
 
 Peculiar Car Rental
 ========================================================
@@ -52,7 +51,6 @@ incremental: true
     - $x_{ij} \in \{0, 1\}$
         - If $x_{ij} = 1$, customer $j$ gets car $i$ 
         - If $x_{ij} = 0$, customer $j$ did not get a car
-[mathjax](www.mathjax.org)
 
 Find constraints on valid solutions
 ========================================================
