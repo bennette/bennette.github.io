@@ -3,6 +3,7 @@ Solving a problem through integer programming
 author: Walter Bennette
 date: 12 - 04 - 2013
 transition: rotate
+<script type="text/javascript" src="bennette.github.io/presentations/IE312/slides_files/mathjax/MathJax.js"></script>
 
 Steps to follow
 ========================================================
@@ -42,6 +43,7 @@ What needs to be done?
 Decide what constitutes a solution
 ========================================================
 incremental: true
+
 - Need to assign cars to customers
     - Car $i = 1, ... , m$
     - Customer $j = 1, ... , n$

@@ -1,6 +1,6 @@
 ---
 layout: home
-description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
+description: "The personal webpage of Walter Dean Bennette."
 title: Home
 tags: [Jekyll, theme, responsive, blog, template]
 image:

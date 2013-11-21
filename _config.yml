@@ -3,14 +3,14 @@ title2:           Small data
 tagline:          A short tagline
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url:             http://bennette.github.io
+#url:             http://bennette.github.io
 
 
 # Owner/author information
 owner:
   name:           Walter Bennette
   avatar:         bio-photo.jpg
-  bio1:           "Data Mining<br>Operations Research<br>Visualization"
+  bio1:           "Data Mining<br>Operations Research"
   email:          bennette@iastate.edu
   # Social networking links are used in author-bio sidebar. Update and remove as you like.       
   email: "bennette@iastate.edu"
