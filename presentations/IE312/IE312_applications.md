@@ -280,7 +280,13 @@ LINGO:
 
 Example: Solution
 ========================================================
-   CUST| M | T | W | R | F | S 
+
+-
+-
+-
+ 
+ 
+ CUST| M | T | W | R | F | S 
    -------|---|---|---|---|---|---
     ABBY | 1 | 1 | 0 | 0 | 0 | 0 
     AL | 0 | 0 | 1 | 1 | 1 | 1 
@@ -288,8 +294,12 @@ Example: Solution
     BRUCE | 0 | 1 | 1 | 1 | 0 | 0 
     CARL | 1 | 1 | 1 | 0 | 0 | 0 
     CINDY | 0 | 0 | 0 | 1 | 1 | 1 
+
 ***
-DV               | Value
+-
+-
+-
+ DV               | Value
 -----------------|---
 X( CAR1, BARB)   |1
 X( CAR2, ABBY)   |1
@@ -363,8 +373,32 @@ VIC      0 1 0 1 0 1;
 
 Example: Solution procedure
 ========================================================
-![alt text][id]
+incremental: true
+![alt text][id1]
 
+[id1]:http://bennette.github.io/assets/IE312/3iterations.png "Initial Solution"
+***
+- What is a better objective value upper bound?
+    - 15 cars that cost $10 per day
+    - 6 days each car can be rented
+    - $900
+Example: Solution procedure
+========================================================
+incremental: true
+![alt text][id2]
+[id2]:http://bennette.github.io/assets/IE312/726.png "Feasible Solution"
+***
+- A feasible integer solution has been found
+- A tighter bound has been achieved
+
+Example: Solution procedure
+========================================================
+incremental: true
+![alt text][id3]
+[id3]:http://bennette.github.io/assets/IE312/754.png "Optimal Solution"
+***
+- An integer solution that matches the objective upper bound has been found
+- This solution is optimal
 
 Thanks
 ========================================================
@@ -455,6 +489,6 @@ LINGO Model
 
 </pre>
 
-[id]:
+
 
 
