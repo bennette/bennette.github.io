@@ -53,7 +53,7 @@ incremental: true
 - Decision variable
     - $x_{ij} \in \{0, 1\}$
         - If $x_{ij} = 1$, customer $j$ gets car $i$ 
-        - If $x_{ij} = 0$, customer $j$ did not get a car
+        - If $x_{ij} = 0$, customer $j$ did not get car $i$
 
 Find constraints on valid solutions
 ========================================================
@@ -61,8 +61,8 @@ incremental: true
 - A customer $j$, should get no more than one car $i$
     - $\sum\limits_{i = 1}^{m} x_{ij} \leq 1 \space\space \space \space j = 1, ... , n$
     - For three cars and two customers
-        - $x_{1, 1} + x_{2, 1} + x_{3, 1} \leq 1$
-        - $x_{1, 2} + x_{2, 2} + x_{3, 2} \leq 1$
+        - Customer 1: $\space x_{1, 1} + x_{2, 1} + x_{3, 1} \leq 1$
+        - Customer 2: $\space x_{1, 2} + x_{2, 2} + x_{3, 2} \leq 1$
 
 Find constraints on valid solutions
 ========================================================
@@ -85,10 +85,10 @@ incremental: true
     - For two cars and two customers:  
       $J_M = \{Customer 1, Customer 2 \}$  
       $J_T = \{Customer 1 \}$
-        - $x_{1, 1} + x_{1, 2} \leq 1 \space$  <-Car 1, Monday
-        - $x_{2, 1} + x_{2, 2} \leq 1 \space$  <-Car 2, Monday
-        - $x_{1, 1} \leq 1 \space$  <-Car 1, Tuesday
-        - $x_{2, 1} \leq 1 \space$  <-Car 2, Tuesday
+        - Car 1, Monday: $\space x_{1, 1} + x_{1, 2} \leq 1$  
+        - Car 2, Monday: $\space x_{2, 1} + x_{2, 2} \leq 1$
+        - Car 1, Tuesday: $\space x_{1, 1} \leq 1$
+        - Car 2, Tuesday: $\space x_{2, 1} \leq 1$
 
 Decide what type of solution is optimal
 ========================================================
@@ -160,13 +160,13 @@ j| CUSTOMER| M
     4|  BRUCE | 0  
        
 - As described  
-    - $x_{1, 3} \leq 1 \space$  <-Car 1, Monday
-    - $x_{2, 3} \leq 1 \space$  <-Car 2, Monday
-    - $x_{3, 3} \leq 1 \space$  <-Car 3, Monday  
+    - Car 1, Monday: $\space x_{1, 3} \leq 1$
+    - Car 2, Monday: $\space x_{2, 3} \leq 1$
+    - Car 3, Monday: $\space x_{3, 3} \leq 1$  
 - Equivalent formulation
-    - $1x_{1, 3} + 0x_{1,4} \leq 1 \space$  <-Car 1, Monday
-    - $1x_{2, 3} + 0x_{2,4} \leq 1 \space$  <-Car 2, Monday
-    - $1x_{3, 3} + 0x_{3,4} \leq 1 \space$  <-Car 3, Monday    
+    - Car 1, Monday: $\space 1x_{1, 3} + 0x_{1,4} \leq 1$
+    - Car 2, Monday: $\space 1x_{2, 3} + 0x_{2,4} \leq 1$
+    - Car 3, Monday: $\space 1x_{3, 3} + 0x_{3,4} \leq 1$   
 
 Example: LINGO Model
 ========================================================
@@ -310,7 +310,7 @@ X( CAR3, CINDY)  |1
 Example: Solution
 =======================================================
 
-Objective value: 180  
+Objective value: 170  
 
 Solution: reject Bruce's reservation, accept all others
 
@@ -403,7 +403,7 @@ incremental: true
 Thanks
 ========================================================
 
-- Presentation http://bennette.github.io/presentations/IE312
+- http://bennette.github.io/presentations/IE312
 - [LINGO MODEL](http://bennette.github.io/assets/IE312/smallmodel.lg4)
 
 
