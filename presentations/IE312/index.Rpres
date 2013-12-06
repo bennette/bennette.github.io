@@ -27,6 +27,12 @@ incremental: true
 - Joe hopes he can earn more money by identifying the correct customers to turn away
 
 
+  ![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+
+
+
 Peculiar Car Rental has some peculiar rental practices
 ========================================================
 incremental: true
@@ -121,7 +127,10 @@ This is an integer program, it can be solved through branch and bound!
 Example
 ========================================================
  Lets give it a go!
- 
+
+![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/used-car-salesman-seo.jpg "Initial Solution" 
 
 Example: Data
 ========================================================
@@ -406,7 +415,9 @@ Thanks
 - http://bennette.github.io/presentations/IE312
 - [LINGO MODEL](http://bennette.github.io/assets/IE312/smallmodel.lg4)
 
+![alt text][id10]
 
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/Sleazy_Used_Car_Salesman_Marketing_Copywriting_Guaranteed.jpg "Initial Solution" 
 
 LINGO Model
 ========================================================
