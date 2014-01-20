@@ -4,7 +4,7 @@ description: "The personal webpage of Walter Dean Bennette."
 title: Home
 tags: [Jekyll, theme, responsive, blog, template]
 image:
-  feature: black.jpg
+  feature: banner_binaryIII.jpg
 ---
 
 

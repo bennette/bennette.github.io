@@ -8,5 +8,5 @@ tags: [resume, cv]
 
 [PDF Version](/assets/resume.pdf)
 
-###
+
 
