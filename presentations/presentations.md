@@ -6,4 +6,4 @@ tagline: Disseminating information
 tags: [presentations, cv]
 ---
 * [IE 312- An integer programming application](/presentations/IE312)
-* [IE 501/601 Things I wish I knew](/presentations/IE601)
+* [IE 501/601- Things I wish I knew](/presentations/IE601)
