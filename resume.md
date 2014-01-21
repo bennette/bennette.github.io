@@ -5,7 +5,7 @@ title: Resume
 tagline: My Resume
 tags: [resume, cv]
 image:
-  feature: sault5.jpeg
+  feature: sault6.jpeg
 ---
 
 [PDF Version](/assets/resume.pdf)
