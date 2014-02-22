@@ -9,3 +9,4 @@ image:
 ---
 * [IE 312- An integer programming application](/presentations/IE312)
 * [IE 501/601- Things I wish I knew](/presentations/IE601)
+* [Data Mining Group](/Data_Mining_Group)

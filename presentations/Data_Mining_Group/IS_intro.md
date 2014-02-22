@@ -14,6 +14,17 @@ Outline
 3. IP instance selection formulation  
 4. Results
 
+Outline
+=================
+1. Motivation 
+    - ***What is classification?***
+    - Why do we want better classifiers?
+2. Instance selection  
+    - Explanation  
+    - Past formulation  
+3. IP instance selection formulation  
+4. Results
+
 What is classification?
 =======================
 
@@ -62,6 +73,71 @@ transition: none
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classify_2.png" width=700 height=600>
 </div>
+
+What is classification?
+=======================
+
+Test accuracy is found by making predictions on previously unseen data.
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/test_data.png" width=900 height=300>
+</div>
+
+We say the decison tree has ***80% test accuracy*** because four of the five predictions are correct.
+
+Outline
+=================
+1. Motivation 
+    - What is classification?
+    - ***Why do we want better classifiers?***
+2. Instance selection  
+    - Explanation  
+    - Past formulation  
+3. IP instance selection formulation  
+4. Results
+
+Why do we want better classifiers?
+==================================
+
+Classification models can be useful in a variety of application areas
+- Retail
+- Healthcare
+- Finance
+
+Better (or classifiers with higher testing accuracy) are beneficial
+- Make fewer misclassifications
+- Gain useful knowledge when analyzing the classifier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
