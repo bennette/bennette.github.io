@@ -46,7 +46,7 @@ What is classification?
 =======================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classification_overview.png" width=700 height=300>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classification_overview.png" width=1100 height=600>
 </div>
 
 
