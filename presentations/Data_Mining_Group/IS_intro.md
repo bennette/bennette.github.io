@@ -38,9 +38,16 @@ A ***classifier*** is a scheme built from training data to classify unlabeled da
 
 The ***decision tree*** classifier builds a model that tries to split the data into homogeneous groups.
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/decision_tree.png" width=700 height=300>
+</div>
 
+What is classification?
+=======================
 
-
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classification_overview.png" width=700 height=300>
+</div>
 
 
 
