@@ -28,10 +28,15 @@ What is classification?
 =======================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/training_data.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/training_data.png" width=1100 height=600>
 </div>
 
+What is classification?
+=======================
 
+A ***classifier*** is a scheme built from training data to classify unlabeled data.  
+
+The ***decision tree*** classifier builds a model that tries to split the data into homogeneous groups.
 
 
 
