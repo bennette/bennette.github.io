@@ -19,7 +19,9 @@ What is classification?
 
 <a href="http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&_r=0" target="_blank">How Companies Learn Your Secrets</a>
 
+![alt text][id10]
 
+[id10]:http://bennette.github.io/presentations/Data Mining Group/Images/target.png "target"
 
 Target 
 
