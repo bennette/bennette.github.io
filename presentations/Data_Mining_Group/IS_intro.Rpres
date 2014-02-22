@@ -17,20 +17,19 @@ Outline
 What is classification?
 =======================
 
-<a href="http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&_r=0" target="_blank">How Companies Learn Your Secrets</a>
-
-![alt text][id10] Target used data mining to predict when their customer's had become pregnant
-
-
-***
-<br>  
-<br>
-![alt text][id10]
+<a href="http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&_r=0" target="_blank">How Companies Learn Your Secrets</a>  
+![alt text][id10]  
+Target used data mining to determine when customers became pregnant.
 
 [id10]:http://bennette.github.io/presentations/Data_Mining_Group/Images/target.png "target"
 
 
+What is classification?
+=======================
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/training_data.png" width=700 height=400>
+</div>
 
 
 
