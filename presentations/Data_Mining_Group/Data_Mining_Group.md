@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /Data_Mining_Group/index.html
+permalink: /index.html
 title: Data Mining Group
 tagline: Disseminating information
 tags: [presentations, cv]
