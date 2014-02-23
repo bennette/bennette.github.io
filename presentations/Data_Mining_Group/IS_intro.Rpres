@@ -171,9 +171,27 @@ Classes may overlap
 
 Where should these classes be seperated?
 
+Instance Selection Motivation
+==============================
+transition: none
+Classes may have outliers 
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers1.png" width=700 height=400>
+</div>
 
+Should these outliers be accomadated?
 
+Instance Selection Motivation
+==============================
+transition: none
+Classes may have outliers 
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers2.png" width=700 height=400>
+</div>
+
+Should these outliers be accomadated?
 
 
 
