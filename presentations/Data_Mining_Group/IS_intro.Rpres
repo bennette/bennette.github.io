@@ -304,7 +304,11 @@ ${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \
 Past formulation  
 ===================
 
-A ***VAST*** majority rely on evolutionary algorithms to solve this problem.
+A ***VAST*** majority rely on evolutionary algorithms to solve this problem.  
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/party.gif" width=900 height=500>
+</div>
 
 
 
