@@ -238,8 +238,36 @@ Outline
 3. IP instance selection formulation  
 4. Results
 
+Explanation
+===============
+transition: none
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain1.png" width=900 height=500>
+</div>
 
+Explanation
+===============
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain2.png" width=900 height=500>
+</div>
+
+Explanation
+===============
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain3.png" width=900 height=500>
+</div>
+
+Explanation
+===============
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=900 height=500>
+</div>
 
 
 
