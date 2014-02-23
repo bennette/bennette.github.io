@@ -9,7 +9,7 @@ Outline
     - What is classification?
     - Why do we want better classifiers?
 2. Instance selection  
-    - Explanation  
+    - Motivation  
     - Past formulation  
 3. IP instance selection formulation  
 4. Results
@@ -20,7 +20,7 @@ Outline
     - ***What is classification?***
     - Why do we want better classifiers?
 2. Instance selection  
-    - Explanation  
+    - Motivation  
     - Past formulation  
 3. IP instance selection formulation  
 4. Results
@@ -114,26 +114,62 @@ Outline
     - What is classification?
     - Why do we want better classifiers?
 2. Instance selection  
-    - ***Explanation***  
+    - ***Motivation***  
     - Past formulation  
 3. IP instance selection formulation  
 4. Results
 
-Instance Selection Explanation
+Instance Selection Motivation
 ==============================
 
 - Aspects of the training data may make it difficult to build an accurate classifier  
 
 - We believe that selecting which instances to learn from can improve the accuracy of a classifier.  This is called ***instance selection***!
 
+Instance Selection Motivation
+==============================
+transition: none
+Classes may overlap  
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap1.png" width=700 height=400>
+</div>
+
+Where should these classes be seperated?
+
+Instance Selection Motivation
+==============================
+transition: none
+Classes may overlap  
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap2.png" width=700 height=400>
+</div>
+
+Where should these classes be seperated?
 
 
+Instance Selection Motivation
+==============================
+transition: none
+Classes may overlap  
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap3.png" width=700 height=400>
+</div>
 
+Where should these classes be seperated?
 
+Instance Selection Motivation
+==============================
+transition: none
+Classes may overlap  
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap4.png" width=700 height=400>
+</div>
 
-
+Where should these classes be seperated?
 
 
 
