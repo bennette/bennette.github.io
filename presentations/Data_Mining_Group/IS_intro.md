@@ -515,6 +515,26 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_4.png" width=1000 height=609>
 </div>
 
+Column generation: Type II
+===========================
+
+- Exploit a feature of the simplex algorithm to guarantee that the optimal solution of the master problem is found  
+
+- Let us have a quick remidner of how simplex works
+
+Column generation: Type II
+===========================
+
+- Given a feasible solution to $\left \{max \ c^Tx: Ax \le b, x \ge 0 \right \}$  
+- The solution can be written as the variables belonging to the basis and the variables belonging to the non-basis  
+- Simplex works toward the optimal solution of the LP by switching a variable in the non-basis for one in the basis  
+- For a non-basis variable $\ j$, $Reduced \ Cost_j = \left \{c_j-\pi   \right \}$
+
+
+
+
+
+
 Questions????
 ================
 
