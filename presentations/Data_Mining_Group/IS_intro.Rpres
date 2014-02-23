@@ -532,11 +532,60 @@ incremental: true
     - <small> $c_j \$ is the objective coefficient of variable $j$</small>  
       - <small>benefit from including variable $j$ in basis </small>  
     - <small> $a_j \$ is the column of the A matrix associated with variable $j$</small>  
-    - <small> $pi \$ is the simplex multiplier of the LP </small>
+    - <small> $\pi \$ is the simplex multiplier of the LP </small>
       - <small> cost of including variable $j \$ in basis </small>
 
+Column generation: Type II
+==========================
+transition: none
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_1.png" width=1000 height=400>
+</div>
 
+Column generation: Type II
+==========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_2.png" width=1000 height=400>
+</div>
+
+Column generation: Type II
+==========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_3.png" width=1000 height=400>
+</div>
+
+Column generation: Type II
+==========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_4.png" width=1000 height=400>
+</div>
+
+Column generation: Type II
+==========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_5.png" width=1000 height=400>
+</div>
+
+Column generation: Type II
+==========================
+incremental: true
+***Process***
+
+1. Generate a subset of variables, $J'$, from the MP  
+2. Use $J'$ to define the RMP  
+3. Solve the RMP for optimal dual variables $\pi^*$  
+4.  Solve the POP
+    - If the optimal solution is positive add $x^{new}$ to $J'$
+    - If the optimal solution is non-positive then the optimal solution to the RMP is optimal to the MP
 
 
 Questions????
