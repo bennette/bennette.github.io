@@ -266,23 +266,45 @@ Explanation
 ===============
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=800 height=450>
 </div>
 
+Explanation
+===============
 
+Instance selection is a combinatorial optimization problem  
+- Each instance is included or not included in the selected training data
 
+Goal: maximize classifier accuracy   
+- No closed form objective function
+- $2^n$ subsets for a dataset of size $n$
 
+Outline
+=================
+1. Classification   
+    - What is classification?
+    - Why do we want better classifiers?
+2. Instance selection
+    - Motivation
+    - Explanation  
+    - **Past formulation** 
+3. IP instance selection formulation  
+4. Results
 
+Past formulation
+==================
+<br>
+${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \ \ \ \ \ \ \ x_i \in \{0,1\} \ \forall \ i \in I}$
 
+<br>
+<br>
+* $I \$ is the set of all instances  
+* The decison is whether or not to include an instance in the new training data
 
+Past formulation  
+===================
 
-
-
-
-
-
-
-
+A ***VAST*** majority rely on evolutionary algorithms to solve this problem.
 
 
 
