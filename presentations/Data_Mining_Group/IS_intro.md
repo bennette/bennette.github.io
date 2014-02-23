@@ -488,10 +488,32 @@ Column generation: Type I
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_1.png" width=900 height=609>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_1.png" width=1000 height=609>
 </div>
 
+Column generation: Type I
+========================
+transition: none
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_2.png" width=1000 height=609>
+</div>
+
+Column generation: Type I
+========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_3.png" width=1000 height=609>
+</div>
+
+Column generation: Type I
+========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_4.png" width=1000 height=609>
+</div>
 
 Questions????
 ================
