@@ -467,6 +467,21 @@ Column generation
     - Relax integrality constraints
     - Branch and price
 
+Column Generation
+========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cg1.png" width=900 height=400>
+</div>
+
+Column Generation
+========================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cg2.png" width=900 height=400>
+</div>
 
 Questions????
 ================
