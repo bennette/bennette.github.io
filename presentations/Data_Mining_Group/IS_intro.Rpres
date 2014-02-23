@@ -5,22 +5,24 @@ date: 02-28-2014
 
 Outline
 =================
-1. Motivation 
+1. Classification   
     - What is classification?
     - Why do we want better classifiers?
-2. Instance selection  
-    - Motivation  
+2. Instance selection
+    - Motivation
+    - Explanation  
     - Past formulation  
 3. IP instance selection formulation  
 4. Results
 
 Outline
 =================
-1. Motivation 
+1. Classification   
     - ***What is classification?***
     - Why do we want better classifiers?
-2. Instance selection  
-    - Motivation  
+2. Instance selection
+    - Motivation
+    - Explanation  
     - Past formulation  
 3. IP instance selection formulation  
 4. Results
@@ -87,10 +89,11 @@ We say the decison tree has ***80% test accuracy*** because four of the five pre
 
 Outline
 =================
-1. Motivation 
+1. Classification   
     - What is classification?
     - ***Why do we want better classifiers?***
-2. Instance selection  
+2. Instance selection
+    - Motivation
     - Explanation  
     - Past formulation  
 3. IP instance selection formulation  
@@ -110,23 +113,24 @@ Better (or classifiers with higher testing accuracy) are beneficial
 
 Outline
 =================
-1. Motivation 
+1. Classification   
     - What is classification?
     - Why do we want better classifiers?
-2. Instance selection  
-    - ***Motivation***  
+2. Instance selection
+    - **Motivation**
+    - Explanation  
     - Past formulation  
 3. IP instance selection formulation  
 4. Results
 
-Instance Selection Motivation
+Motivation
 ==============================
 
 - Aspects of the training data may make it difficult to build an accurate classifier  
 
 - We believe that selecting which instances to learn from can improve the accuracy of a classifier.  This is called ***instance selection***!
 
-Instance Selection Motivation
+Motivation
 ==============================
 transition: none
 Classes may overlap  
@@ -137,7 +141,7 @@ Classes may overlap
 
 Where should these classes be seperated?
 
-Instance Selection Motivation
+Motivation
 ==============================
 transition: none
 Classes may overlap  
@@ -149,7 +153,7 @@ Classes may overlap
 Where should these classes be seperated?
 
 
-Instance Selection Motivation
+Motivation
 ==============================
 transition: none
 Classes may overlap  
@@ -160,7 +164,7 @@ Classes may overlap
 
 Where should these classes be seperated?
 
-Instance Selection Motivation
+Motivation
 ==============================
 transition: none
 Classes may overlap  
@@ -171,7 +175,7 @@ Classes may overlap
 
 Where should these classes be seperated?
 
-Instance Selection Motivation
+Motivation
 ==============================
 transition: none
 Classes may have outliers 
@@ -182,7 +186,7 @@ Classes may have outliers
 
 Should these outliers be accomadated?
 
-Instance Selection Motivation
+Motivation
 ==============================
 transition: none
 Classes may have outliers 
@@ -192,6 +196,139 @@ Classes may have outliers
 </div>
 
 Should these outliers be accomadated?
+
+Motivation
+==============================
+transition: none
+Minority class
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/minority1.png" width=700 height=400>
+</div>
+
+Does capturing the minority class introduce unnecessary structure?
+
+Motivation
+==============================
+transition: none
+Minority class
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/minority2.png" width=700 height=400>
+</div>
+
+Does capturing the minority class introduce unnecessary structure?
+
+Motivation
+=============================
+
+- Instance selection can address issues in the training data by creating a subset of the original data
+
+- The intention is that some or all classification algorithms will perform better when learning from the selected/reduced data set
+
+Outline
+=================
+1. Classification   
+    - What is classification?
+    - Why do we want better classifiers?
+2. Instance selection
+    - Motivation
+    - **Explanation**  
+    - Past formulation  
+3. IP instance selection formulation  
+4. Results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
