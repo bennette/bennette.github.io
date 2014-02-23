@@ -12,7 +12,7 @@ Outline
     - Motivation
     - Explanation  
     - Past formulation  
-3. IP instance selection formulation  
+3. Instance selection reformulation  
 4. Results
 
 Outline
@@ -24,7 +24,7 @@ Outline
     - Motivation
     - Explanation  
     - Past formulation  
-3. IP instance selection formulation  
+3. Instance selection reformulation  
 4. Results
 
 What is classification?
@@ -96,7 +96,7 @@ Outline
     - Motivation
     - Explanation  
     - Past formulation  
-3. IP instance selection formulation  
+3. Instance selection reformulation  
 4. Results
 
 Why do we want better classifiers?
@@ -111,6 +111,13 @@ Better (or classifiers with higher testing accuracy) are beneficial
 - Make fewer misclassifications
 - Gain useful knowledge when analyzing the classifier
 
+Questions????
+================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused2.gif" width=700 height=600>
+</div>
+
 Outline
 =================
 1. Classification   
@@ -120,13 +127,13 @@ Outline
     - **Motivation**
     - Explanation  
     - Past formulation  
-3. IP instance selection formulation  
+3. Instance selection reformulation  
 4. Results
 
 Motivation
 ==============================
 
-- Aspects of the training data may make it difficult to build an accurate classifier  
+- Aspects of training data may make it difficult to build/induce/learn an accurate classifier  
 
 - We believe that selecting which instances to learn from can improve the accuracy of a classifier.  This is called ***instance selection***!
 
@@ -224,7 +231,7 @@ Motivation
 
 - Instance selection can address issues in the training data by creating a subset of the original data
 
-- The intention is that some or all classification algorithms will perform better when learning from the selected/reduced data set
+- The intention is that the classification algorithm will perform better when learning from the selected/reduced data set
 
 Outline
 =================
@@ -235,7 +242,7 @@ Outline
     - Motivation
     - **Explanation**  
     - Past formulation  
-3. IP instance selection formulation  
+3. Instance selection reformulation  
 4. Results
 
 Explanation
@@ -279,6 +286,14 @@ Goal: maximize classifier accuracy
 - No closed form objective function
 - $2^n$ subsets for a dataset of size $n$
 
+Good?
+================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused3.gif" width=700 height=501>
+</div>
+
+
 Outline
 =================
 1. Classification   
@@ -288,7 +303,7 @@ Outline
     - Motivation
     - Explanation  
     - **Past formulation** 
-3. IP instance selection formulation  
+3. Instance selection reformulation  
 4. Results
 
 Past formulation
@@ -301,19 +316,164 @@ ${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \
 * $I \$ is the set of all instances  
 * The decison is whether or not to include an instance in the new training data
 
-Past formulation  
+Past formulations 
 ===================
 
-A ***VAST*** majority rely on evolutionary algorithms to solve this problem.  
+- A ***VAST*** majority rely on evolutionary algorithms to solve this problem.
+
+- Other combinatorial optimization problems look similar to instance selection if ***the problem is reformulated***.  This allows us to ***take advantage of optimization theory***. 
+
+How it feels to find the gap in literature
+==================
 
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/party.gif" width=900 height=500>
 </div>
 
+Outline
+=================
+1. Classification   
+    - What is classification?
+    - Why do we want better classifiers?
+2. Instance selection
+    - Motivation
+    - Explanation  
+    - Past formulation
+3. **Instance selection reformulation**  
+4. Results
+
+Instance selection reformulation
+================================
+transition: none
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+<br><br><br><br>
+&nbsp; &nbsp; &nbsp;
+
+Instance selection reformulation
+================================
+transition: none
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+<br><br><br><br><br><br><br><br>  
+&nbsp; &nbsp; <font color="red"><---</font>A column is <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; associated with each <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; possible subset of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; instances
+
+Instance selection reformulation
+================================
+transition: none
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+<br><br><br><br><br><br> 
+&nbsp; &nbsp; &nbsp;  <font color="red"><---</font> Select at most one <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;column
+
+Instance selection reformulation
+================================
+transition: none
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+<br><br><br><br>
+&nbsp; &nbsp; &nbsp; <font color="red"><---</font> $a_{ij}$ indicates if instance<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$i \$ is in column $\ j$
+
+Instance selection reformulation
+================================
+transition: none
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+
+&nbsp; &nbsp; &nbsp; <font color="red"><---</font> $c_j$ is the accuracy of a <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; classifier built from <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the contents in column <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$\ j$
+
+Instance selection reformulation
+================================
+transition: rotate
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+<br><br><br><br><br><br><br><br>  
+&nbsp; &nbsp; <font color="red"><---</font>For a dataset of size $n$ <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; there are $2^n$ decision<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; variables
 
 
 
 
+Questions????
+================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused1.gif" width=500 height=600>
+</div>
+
+
+
+Questions????
+================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused4.gif" width=700 height=501>
+</div>
+
+Questions????
+================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused5.gif" width=700 height=500>
+</div>
 
 
 
