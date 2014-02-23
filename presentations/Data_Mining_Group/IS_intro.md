@@ -451,9 +451,22 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 
 Enter COLUMN GENERATION!!
 ========================
+type: alert
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/enter1.gif" width=700 height=501>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/enter3.gif" width=700 height=500>
 </div>
+
+Column generation
+==================
+
+- A technique to solve linear programs with a huge number of decision variables  
+    - Too many variables to solve quickly
+    - Too many variables to even enumerate them all
+    
+- Commonly extended to integer programs
+    - Relax integrality constraints
+    - Branch and price
+
 
 Questions????
 ================
