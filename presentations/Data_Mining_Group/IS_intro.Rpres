@@ -524,12 +524,16 @@ Column generation: Type II
 
 Column generation: Type II
 ===========================
-
-- Given a feasible solution to $\left \{max \ c^Tx: Ax \le b, x \ge 0 \right \}$  
-- The solution can be written as the variables belonging to the basis and the variables belonging to the non-basis  
-- Simplex works toward the optimal solution of the LP by switching a variable in the non-basis for one in the basis  
-- For a non-basis variable $\ j$, $Reduced \ Cost_j = \left \{c_j-\pi   \right \}$
-
+incremental: true
+- <small> Given a feasible solution to $\left \{max \ c^Tx: Ax \le b, x \ge 0 \right \}$</small>  
+- <small> The solution can be written as the variables belonging to the basis and the variables belonging to the non-basis</small>    
+- <small> Simplex works toward the optimal solution of the LP by switching a variable in the non-basis for one in the basis</small>     
+- <small> For a non-basis variable $j$, $\ Reduced \ Cost_j = \left \{c_j-\pi^Ta_j   \right \}$</small>    
+    - <small> $c_j \$ is the objective coefficient of variable $j$</small>  
+      - <small>benefit from including variable $j$ in basis </small>  
+    - <small> $a_j \$ is the column of the A matrix associated with variable $j$</small>  
+    - <small> $pi \$ is the simplex multiplier of the LP </small>
+      - <small> cost of including variable $j \$ in basis </small>
 
 
 
