@@ -587,6 +587,14 @@ incremental: true
     - If the optimal solution is positive add $x^{new}$ to $J'$
     - If the optimal solution is non-positive then the optimal solution to the RMP is optimal to the MP
 
+How's everyone doing?
+====================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/mind1.gif" width=600 height=600>
+</div>
+
+
 
 Questions????
 ================
