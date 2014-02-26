@@ -653,7 +653,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_2.png" width=900 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_2.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -661,8 +661,73 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_3.png" width=900 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_3.png" width=900 height=500>
 </div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop1.png" width=900 height=500>
+</div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop2.png" width=900 height=500>
+</div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop3.png" width=900 height=500>
+</div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop4.png" width=900 height=500>
+</div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop5.png" width=900 height=500>
+</div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop6.png" width=900 height=500>
+</div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop7.png" width=900 height=500>
+</div>
+
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop8.png" width=900 height=500>
+</div>
+
 
 
 
