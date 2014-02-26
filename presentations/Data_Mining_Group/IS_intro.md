@@ -641,6 +641,12 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 <br><br><br><br><br><br><br><br>  
 &nbsp; &nbsp; <font color="red"><---</font>For a dataset of size $n$ <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; there are $2^n$ decision<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; variables  
 
+Implementing Column Generation
+==============================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_1.png" width=900 height=500>
+</div>
 
 
 Questions????
