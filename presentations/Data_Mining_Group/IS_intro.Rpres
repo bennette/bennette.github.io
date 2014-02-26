@@ -648,6 +648,16 @@ Implementing Column Generation
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_1.png" width=900 height=500>
 </div>
 
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_2.png" width=900 height=603>
+</div>
+
+
+
 
 Questions????
 ================
