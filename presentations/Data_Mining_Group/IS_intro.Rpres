@@ -728,6 +728,38 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop8.png" width=900 height=500>
 </div>
 
+Implementing Column Generation
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overall.png" width=900 height=600>
+</div>
+
+Whew! Technical details are done.
+===============================
+transition: none
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/whew.gif" width=900 height=500>
+</div>
+
+Outline
+=================
+1. Classification   
+    - What is classification?
+    - Why do we want better classifiers?
+2. Instance selection
+    - Motivation
+    - Explanation  
+    - Past formulation
+3. Instance selection reformulation
+    - Reformulation   
+    - Column generation
+4. ***Interesting*** **Results**
+
+Interesting Results
+===================
 
 
 
