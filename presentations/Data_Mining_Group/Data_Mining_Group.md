@@ -6,4 +6,4 @@ tagline: Disseminating information
 tags: [presentations, cv]
 
 ---
-* [Test](/presentations/IE312)
+* [Instance selection introduction](/presentations/Data_Mining_Group/IS_intro)

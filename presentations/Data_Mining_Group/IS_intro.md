@@ -89,7 +89,7 @@ Test accuracy is found by making predictions on previously unseen data.
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/test_data.png" width=900 height=300>
 </div>
 
-We say the decison tree has ***80% test accuracy*** because four of the five predictions are correct.
+We say the decision tree has ***80% test accuracy*** because four of the five predictions are correct.
 
 Outline
 =================
@@ -114,7 +114,7 @@ Classification models can be useful in a variety of application areas
 - Finance
 
 Better (or classifiers with higher testing accuracy) are beneficial
-- Make fewer misclassifications
+- Make fewer missclassifications
 - Gain useful knowledge when analyzing the classifier
 
 Questions????
@@ -154,7 +154,7 @@ Classes may overlap
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap1.png" width=700 height=400>
 </div>
 
-Where should these classes be seperated?
+Where should these classes be separated?
 
 Motivation
 ==============================
@@ -165,7 +165,7 @@ Classes may overlap
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap2.png" width=700 height=400>
 </div>
 
-Where should these classes be seperated?
+Where should these classes be separated?
 
 
 Motivation
@@ -177,7 +177,7 @@ Classes may overlap
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap3.png" width=700 height=400>
 </div>
 
-Where should these classes be seperated?
+Where should these classes be separated?
 
 Motivation
 ==============================
@@ -188,7 +188,7 @@ Classes may overlap
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap4.png" width=700 height=400>
 </div>
 
-Where should these classes be seperated?
+Where should these classes be separated?
 
 Motivation
 ==============================
@@ -199,7 +199,7 @@ Classes may have outliers
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers1.png" width=700 height=400>
 </div>
 
-Should these outliers be accomadated?
+Should these outliers be accommodated?
 
 Motivation
 ==============================
@@ -210,7 +210,7 @@ Classes may have outliers
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers2.png" width=700 height=400>
 </div>
 
-Should these outliers be accomadated?
+Should these outliers be accommodated?
 
 Motivation
 ==============================
@@ -326,7 +326,7 @@ ${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \
 <br>
 <br>
 * $I \$ is the set of all instances  
-* The decison is whether or not to include an instance in the new training data
+* The decision is whether or not to include an instance in the new training data
 
 Past formulations 
 ===================
@@ -762,36 +762,45 @@ Interesting Results
 ===================
 
 Statlog (Landsat Satellite) dataset  
-- Clssify pixels of an image  
+- Classify pixels of an image  
     - 37 attributes
     - 296 instances
     - 6 classes
 - UCI machine learning repository
 
-
-
-Questions????
-================
+Interesting Results
+===================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused1.gif" width=500 height=600>
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/interesting.png" width=900 height=450>
 </div>
 
+Interesting Results
+===================
+
+Showing the effect of instance selection on a naive Bayes classifier.  Average test accuracy is reported.
 
 
-Questions????
-================
+|Dataset|Original| Instance Selection|
+|-------|--------|-------------------|
+|Balance|90%|91%|
+|Chess|84%|90%|
+|Credit Approval|78%|85%|
+|E-coli|83%|83%|
+|Statlog|80%|83%|
+|Tic-Tac-Toe Endgame|70%|72%|
 
-<div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused4.gif" width=700 height=501>
-</div>
+Conclusion
+============
 
-Questions????
-================
+- Integer programming techniques can help us solve the instance selection problem
 
-<div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused5.gif" width=700 height=500>
-</div>
+- Instance selection manipulates the training data to allow classifiers to take greater advantage of the data
+    - overlapping classes
+    - outliers
+    - minority classes
+
+
 
 
 
