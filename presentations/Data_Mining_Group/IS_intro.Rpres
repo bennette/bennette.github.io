@@ -12,7 +12,9 @@ Outline
     - Motivation
     - Explanation  
     - Past formulation  
-3. Instance selection reformulation  
+3. Instance selection reformulation 
+    - Reformulation  
+    - Column generation
 4. Results
 
 Outline
@@ -25,6 +27,8 @@ Outline
     - Explanation  
     - Past formulation  
 3. Instance selection reformulation  
+    - Reformulation  
+    - Column generation
 4. Results
 
 What is classification?
@@ -97,6 +101,8 @@ Outline
     - Explanation  
     - Past formulation  
 3. Instance selection reformulation  
+    - Reformulation  
+    - Column generation  
 4. Results
 
 Why do we want better classifiers?
@@ -128,6 +134,8 @@ Outline
     - Explanation  
     - Past formulation  
 3. Instance selection reformulation  
+    - Reformulation  
+    - Column generation  
 4. Results
 
 Motivation
@@ -243,6 +251,8 @@ Outline
     - **Explanation**  
     - Past formulation  
 3. Instance selection reformulation  
+    - Reformulation  
+    - Column generation  
 4. Results
 
 Explanation
@@ -303,7 +313,9 @@ Outline
     - Motivation
     - Explanation  
     - **Past formulation** 
-3. Instance selection reformulation  
+3. Instance selection reformulation   
+    - Reformulation  
+    - Column generation  
 4. Results
 
 Past formulation
@@ -339,7 +351,9 @@ Outline
     - Motivation
     - Explanation  
     - Past formulation
-3. **Instance selection reformulation**  
+3. Instance selection reformulation
+    - **Reformulation**   
+    - Column generation
 4. Results
 
 Instance selection reformulation
@@ -447,7 +461,7 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 ***
 
 <br><br><br><br><br><br><br><br>  
-&nbsp; &nbsp; <font color="red"><---</font>For a dataset of size $n$ <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; there are $2^n$ decision<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; variables
+&nbsp; &nbsp; <font color="red"><---</font>For a dataset of size $n$ <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; there are $2^n$ decision<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; variables  
 
 Enter COLUMN GENERATION!!
 ========================
@@ -455,6 +469,20 @@ type: alert
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/enter3.gif" width=700 height=500>
 </div>
+
+Outline
+=================
+1. Classification   
+    - What is classification?
+    - Why do we want better classifiers?
+2. Instance selection
+    - Motivation
+    - Explanation  
+    - Past formulation
+3. Instance selection reformulation
+    - Reformulation   
+    - **Column generation**
+4. Results
 
 Column generation
 ==================
@@ -520,7 +548,7 @@ Column generation: Type II
 
 - Exploit a feature of the simplex algorithm to guarantee that the optimal solution of the master problem is found  
 
-- Let us have a quick remidner of how simplex works
+- Let us have a quick reminder of how simplex works
 
 Column generation: Type II
 ===========================
@@ -593,6 +621,25 @@ How's everyone doing?
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/mind1.gif" width=600 height=600>
 </div>
+
+Implementing Column Generation
+===============================
+transition: rotate
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+<br><br><br><br><br><br><br><br>  
+&nbsp; &nbsp; <font color="red"><---</font>For a dataset of size $n$ <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; there are $2^n$ decision<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; variables  
 
 
 
