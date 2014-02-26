@@ -761,6 +761,12 @@ Outline
 Interesting Results
 ===================
 
+Statlog (Landsat Satellite) dataset  
+- Clssify pixels of an image  
+    - 37 attributes
+    - 296 instances
+    - 6 classes
+- UCI machine learning repository
 
 
 
