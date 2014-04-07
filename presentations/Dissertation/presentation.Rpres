@@ -24,34 +24,54 @@ Outline
 =========
 
 1.  Motivation
-    - What is a model-based classifier?  
-    - Why do we want better classifiers?  
+    - What is a model-based classifier?
     - What aspects of data could confuse a classifier?  
 2.  Approach 
 3.  Results  
 4.  Impact
+  
+What is a model-based classifier?
+=======================
+<div align="left">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/target.png" width=200 height=250>
+</div>
+<br>  
+<a href="http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&_r=0" target="_blank">In "How Companies Learn Your Secrets", Target used classification to determine if customers were pregnant.</a>  
+
+
+What is a model-based classifier?
+=======================
  
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/training_data.png" width=1100 height=550>
+</div>
+
 What is a model-based classifier?
 =======================
 
-An abstraction of data that can be used for prediction
+A ***model-based classifier*** is a scheme built from training data to classify unlabeled instances.  
+<br>  
 
-<small><small><small><small>
-<span style ="position:absolute;left:0;bottom:0">4 / </span>
-</small></small></small></small>
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/decision_tree.png" width=700 height=300>
+</div>
  
-What is a model-based classifier?
+What is classification?
 =======================
 
-<a href="http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&_r=0" target="_blank">How Companies Learn Your Secrets</a>  
-![alt text][id10]  
-Target used classification to determine if customers were pregnant.
-
-[id10]:http://bennette.github.io/presentations/Data_Mining_Group/Images/target.png "target"
-
-
-
-
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classification_overview.png" width=1100 height=600>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
 Overview
