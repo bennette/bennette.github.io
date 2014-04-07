@@ -74,6 +74,20 @@ What is a model-based classifier?
 =======================
 transition: none
 <div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/class_example3.png" width=700 height=600>
+</div>
+
+What is a model-based classifier?
+=======================
+transition: none
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/class_example4.png" width=700 height=600>
+</div>
+
+What is a model-based classifier?
+=======================
+transition: none
+<div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/class_example2.png" width=700 height=600>
 </div>
 
