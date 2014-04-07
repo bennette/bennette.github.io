@@ -56,14 +56,27 @@ A ***model-based classifier*** is a scheme built from training data to classify 
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/decision_tree.png" width=700 height=300>
 </div>
  
-What is classification?
+What is a model-based classifier?
 =======================
 
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/classification_exampleI.png" width=1100 height=600>
 </div>
  
- 
+What is a model-based classifier?
+=======================
+transition: none
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/class_example1.png" width=700 height=600>
+</div>
+
+What is a model-based classifier?
+=======================
+transition: none
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/class_example2.png" width=700 height=600>
+</div>
+
  
  
  
