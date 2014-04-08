@@ -351,8 +351,9 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/results1.png" width=500 height=900>
 </div>  
 ****  
-
-here
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/results2.png" width=500 height=900>
+</div>   
 
 
 Overview
