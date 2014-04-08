@@ -13,11 +13,10 @@ Model-based classifiers with improved accuracy can be created by learning from c
 </small></small></small></small>
 
 Outline
-=========
-transition: none
+=========  
 1.  Motivation
 2.  Methodology 
-3.  Experimental Results  
+3.  Experimental results  
 4.  Impact
 
 Motivation
@@ -134,14 +133,13 @@ Motivation
 - We believe that selecting which instances to learn from can improve the accuracy of a classifier.  This is called ***instance selection***!
 
 Outline
-=========
-transition: none
+=========  
 1.  Motivation
 2.  Methodology
     - **Instance selection**  
     - Previous work
     - Integer programming formulation
-3.  Experimental Results  
+3.  Experimental results  
 4.  Impact
 
 Instance selection
@@ -182,57 +180,85 @@ Instance selection
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=800 height=450>
 </div>
 
-Instance selection
-=============================
-
-Instance selection is a combinatorial optimization problem  
-- Each instance is included or not included in the selected training data
-
-Goal: maximize classifier accuracy   
-- No closed form objective function
-- $2^n$ subsets for a dataset of size $n$
 
 Outline
-=========
-transition: none
+=========  
 1.  Motivation
 2.  Methodology
     - Instance selection  
     - **Previous work**
     - Integer programming formulation
-3.  Experimental Results  
+3.  Experimental results  
 4.  Impact
 
 Previous work
-============================= 
-<br>
-${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \tau_i \in \{0,1\} \ \forall \ i \in I}$
+=============================
+***Started for k-NN***  
 
-<br>
-<br>
-* $I \$ is the set of all instances  
-* The decision is whether or not to include an instance in the new training data
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/knn1.png" width=500 height=1200>   
+</div> 
+
+****  
+<br>  
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/knn2.png" width=500 height=1200>
+</div>
+
 
 Previous work
 ============================= 
+***Model-based classifiers***   
+<br>
+${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \ \ \ \ \ \ \ x_i \in \{0,1\} \ \forall \ i \in I}$  
 <br>  
-- A ***VAST*** majority rely on evolutionary algorithms to solve this problem.
+* This is a combinatorial optimization problem
+* There are $2^n$ possible solutions  
+* There is no closed form for the objective function
 
-- Other combinatorial optimization problems look similar to instance selection if ***the problem is reformulated***.  This allows us to ***take advantage of optimization theory***. 
+
+Previous work
+=============================   
+- A **VAST** majority rely on evolutionary algorithms to solve this problem.
+
+- Other combinatorial optimization problems look similar to instance selection if **the problem is reformulated**.  This allows us to **take advantage of optimization theory**. 
  
 Outline
 =========
-transition: none
 1.  Motivation
-2.  Approach 
-    - What is instance selection?  
-    - **What is my contribution?**
-3.  Results  
-4.  Impact
+2.  Methodology
+    - Instance selection  
+    - Previous work
+    - **Integer programming formulation**
+3.  Experimental results  
+4.  Impact 
+ 
+Integer programming formulation
+===============================
 
-What is my contribution?
-================================
+**Old decison variables**  
+- Should instance $i$ be included in the training data?
+- $\ x_i \in \{0,1\} \ \forall \ i \in I$
+- Example
+    - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
+    - $If \ x_1 = 1, \ then \ \tau_1 \in \ New \ Training \ Data$
+  
+Integer programming formulation
+===============================
+
+**New decision variables**  
+- Should the $j^{th}$ subset (column) of instances be included in the training data?  
+- $x_j \in \{0,1\} \ \forall \ j \in J$
+- Example
+    - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
+    - $Column^{(1)} = \{\tau_1, \tau_5, \tau_6 \}$  
+    - $\ If \ x_1 = 1, \ then \ \{\tau_1, \tau_5, \tau_6 \} \in \ New \ Training \ Data$
+
+Integer programming formulation
+===============================
 transition: none
+**Formulation 1**
+
 $\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
 
 $\mathbf {s.t}$
@@ -244,6 +270,60 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 ***
 <br><br><br><br>
 &nbsp; &nbsp; &nbsp;
+
+Integer programming formulation
+================================
+transition: none
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+<br><br><br><br><br><br><br>   
+&nbsp; &nbsp; <font color="red"><---</font>A column is <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; associated with each <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; possible subset of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; instances
+
+Integer programming formulation
+================================
+transition: none
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+
+<br><br><br><br><br><br> 
+&nbsp; &nbsp; &nbsp;  <font color="red"><---</font> Select at most one <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;column
+
+Integer programming formulation
+================================
+transition: none
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+<br>  
+&nbsp; &nbsp; &nbsp; <font color="red"><---</font> $c_j$ is the accuracy of a <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; classifier built from <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the contents of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; column $\ j$
+ 
 
 Overall Results
 =============================
@@ -258,16 +338,5 @@ transition: none
 </div>   
 
 
-Overview
-================
 
-Research goal: Better classification models (higher testing accuracy)  
-<br>
-Premise: Aspects of a classifier's training data can make it difficult to induce an accurate model  
-<br>
-Approach: Address issues in the training data through instance selection 
- 
-<small><small><small><small>
-<span style ="position:absolute;left:0;bottom:0">1 / </span>
-</small></small></small></small>
 
