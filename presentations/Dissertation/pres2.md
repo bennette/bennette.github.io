@@ -180,6 +180,14 @@ Instance selection
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=800 height=450>
 </div>
 
+Instance selection
+===============
+
+
+- A combinatorial optimization problem (decide to include or not to include each instance) 
+- For a dataset of size $n$ there are $2^n$ solutions
+- There is no closed form objective function to maximize classifier accuracy
+
 
 Outline
 =========  
@@ -208,7 +216,7 @@ Previous work
 
 Previous work
 ============================= 
-***Model-based classifiers***   
+***Made sense for model-based classifiers***   
 <br>
 ${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \ \ \ \ \ \ \ x_i \in \{0,1\} \ \forall \ i \in I}$  
 <br>  
@@ -221,7 +229,7 @@ Previous work
 =============================   
 - A **VAST** majority rely on evolutionary algorithms to solve this problem.
 
-- Other combinatorial optimization problems look similar to instance selection if **the problem is reformulated**.  This allows us to **take advantage of optimization theory**. 
+- Other optimization problems look similar to instance selection if **the problem is reformulated**.  This allows us to **take advantage of optimization theory**. 
  
 Outline
 =========
@@ -257,7 +265,97 @@ Integer programming formulation
 Integer programming formulation
 ===============================
 transition: none
-**Formulation 1**
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***
+<br><br><br><br>
+&nbsp; &nbsp; &nbsp;
+
+Integer programming formulation
+===============================
+transition: none
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+***  
+<br><br><br><br><br><br><br>  
+&nbsp; &nbsp; <font color="red"><---</font>A column is <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; associated with each <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; possible subset of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; instances  
+
+Integer programming formulation
+===============================
+transition: none
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+*** 
+
+<br><br><br><br><br>  
+&nbsp; &nbsp; &nbsp; <font color="red"><---</font> $a_{ij}$ indicates if instance<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$i \$ is in column $\ j$
+
+
+Integer programming formulation
+===============================
+transition: none
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+*** 
+<br><br>
+&nbsp; &nbsp; &nbsp; <font color="red"><---</font> $c_j$ is the accuracy of a <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; classifier built from <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the contents in column <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$\ j$
+
+Integer programming formulation
+================================
+**Example**    
+$Training= \{\tau_1, \tau_2\}$  
+$Column^{(1)}=\{\ \}$  
+$Column^{(2)}=\{\tau_1 \}$  
+$Column^{(3)}=\{\tau_2 \}$   
+$Column^{(4)}=\{\tau_1, \tau_2 \}$  
+
+<br>
+$\mathbf {Max} \ \ \ \ 0.3x_1 + 0.7x_2 + 0.5x_3 + 0.6x_4$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 + 0x_3 + 1x_4 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 + 1x_3 + 1x_4 \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3, x_4 \in \{0,1\}$ 
+
+
+Integer programming formulation
+===============================
+transition: none
+**Formulation 2**
 
 $\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
 
@@ -274,7 +372,7 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 Integer programming formulation
 ================================
 transition: none
-**Formulation 1**  
+**Formulation 2**  
 
 $\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
 
@@ -292,7 +390,7 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 Integer programming formulation
 ================================
 transition: none
-**Formulation 1**  
+**Formulation 2**  
 
 $\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
 
@@ -310,7 +408,7 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 Integer programming formulation
 ================================
 transition: none
-**Formulation 1**  
+**Formulation 2**  
 
 $\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
 
@@ -324,6 +422,221 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 <br>  
 &nbsp; &nbsp; &nbsp; <font color="red"><---</font> $c_j$ is the accuracy of a <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; classifier built from <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the contents of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; column $\ j$
  
+Integer programming formulation
+================================
+**Example**    
+$Training= \{\tau_1, \tau_2\}$  
+$Column^{(1)}=\{\ \}$  
+$Column^{(2)}=\{\tau_1 \}$  
+$Column^{(3)}=\{\tau_2 \}$   
+$Column^{(4)}=\{\tau_1, \tau_2 \}$  
+
+<br>
+$\mathbf {Max} \ \ \ \ 0.3x_1 + 0.7x_2 + 0.5x_3 + 0.6x_4$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \ \ x_1 + x_2 + x_3 + x_4 \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3, x_4 \in \{0,1\}$ 
+
+Integer programming formulation
+================================
+**Issue**  
+For Formulation 1 and Formulation 2, a dataset of size $n$ has $2^n$ columns
+
+**Solution**  
+Begin with a good selection of columns and use column generation to find improvements  
+
+Outline
+=========
+1.  Motivation
+2.  Methodology
+    - Instance selection  
+    - Previous work
+    - Integer programming formulation
+        - **Column generation**  
+        - An approximation
+3.  Experimental results  
+4.  Impact 
+
+Column generation
+================================
+transition: none
+$Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
+$Column^{(1)} = \{ \tau_1 \}$  
+$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+
+
+
+$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2$
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2 \in \{0,1\}$ 
+
+***  
+
+Column generation
+================================
+transition: none
+$Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
+$Column^{(1)} = \{ \tau_1 \}$  
+$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+
+
+
+$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2$
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2 \in \{0,1\}$ 
+
+***  
+
+<br><br><br><br><br><br><br>  
+<font color="red">---></font> Column generation can <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;discover a new column 
+
+Column generation
+================================
+transition: none
+$Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
+$Column^{(1)} = \{ \tau_1 \}$  
+$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+$Column^{(3)} = \{ \tau_2 \}$
+
+
+$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2 + 0.5x_3$
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 + 0x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 +1x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 +0x_3\le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3 \in \{0,1\}$ 
+
+***  
+
+
+
+Column generation
+================================
+transition: none
+$Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
+$Column^{(1)} = \{ \tau_1 \}$  
+$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+$Column^{(3)} = \{ \tau_2 \}$
+
+
+$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2 + 0.5x_3$
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 + 0x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 +1x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 +0x_3\le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3 \in \{0,1\}$ 
+
+*** 
+<br><br><br><br><br><br><br><br><br>
+<font color="red">---></font> Column generation can <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue until the <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optimal solution is found
+
+Column generation
+================================
+Column generation is a solution technique used for huge linear programs (LP) 
+ 
+1.  Relax IP to LP  
+2.  Create initial columns for the LP  (columns we think are good)
+3.  Solve the reduced LP  
+4.  Supply the dual solution to a price out problem
+4.  If improving column is found add it to the reduced LP and go back to Step 3, else stop
+
+Outline
+=========
+1.  Motivation
+2.  Methodology
+    - Instance selection  
+    - Previous work
+    - Integer programming formulation
+        - Column generation  
+        - **An approximation**
+3.  Experimental results  
+4.  Impact 
+
+An approximation (or two)
+==================
+transition: none 
+From the price out problem:  
+
+$\mathbf {Max} \ \ \ \  c^{new} - \pi^Ta^{new}$  
+
+
+An **approximation of $c^{new}$ based on $a^{new}$** is necesary to implement column generation
+
+An approximation (or two)
+==================
+transition: none 
+From the price out problem:  
+
+$\mathbf {Max} \ \ \ \  c^{new} - \pi^Ta^{new}$  
+
+
+An **approximation of classifier accuracy based on the contents of its training data** is necesary to implement column generation
+
+An approximation (or two)
+=====================
+
+Two approximations are developed.  Each creates a ranking of the instances and assumes **columns with high ranking instances will have high accuracy**.
+
+An approximation (or two)
+==================
+
+**Information approximation:**  
+
+- $L_{\tau} = - \sum_{j=1}^{|y|} P \left( y_j|\tau \right) log \left(P_E \left(y_j|\tau \right) \right)$   
+    - 0 for instances the classifier has mastered  
+    - High for troubling instances
+<br>  
+              
+- $$Bh_{\tau} =
+\begin{cases} \ \ 0.1^{L_\tau},  & \text{if the classifier correctly classifies $\tau$} \\
+-0.1^{L_\tau}, & \text{otherwise}  \\
+\end{cases}$$  
+    - 1 means the classifier is great at classifying the instance 
+    - 0 means it is confused  
+    - -1 means it is horrible
+
+An approximation (or two)
+==================
+
+**Information approximation:**  
+
+1. Sum $Bh_{\tau} \$ from a classifier built with all of the instances  
+2. Sum $Bh_{\tau}\$ from a classifier built with a subset of the instances
+3. Attribute the difference to the missing instances
+
+***High ranking instances are those that decrease the value of $Bh$***
+
+An approximation (or two)
+==================
+**Frequency approximation:**  
+
+1.  Create initial columns
+2.  Identify columns with high accuracy
+3.  Count the occurences of instances in those columns
+
+***High ranking instances are those that appear frequently***
+
+
 
 Overall Results
 =============================
