@@ -227,7 +227,7 @@ ${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \
 
 Previous work
 =============================   
-- A **VAST** majority rely on evolutionary algorithms to solve this problem.
+- A **VAST** majority rely on evolutionary algorithms to find a solution
 
 - Other optimization problems look similar to instance selection if **the problem is reformulated**.  This allows us to **take advantage of optimization theory**. 
  
@@ -240,16 +240,6 @@ Outline
     - **Integer programming formulation**
 3.  Experimental results  
 4.  Impact 
- 
-Integer programming formulation
-===============================
-
-**Old decison variables**  
-- Should instance $i$ be included in the training data?
-- $\ x_i \in \{0,1\} \ \forall \ i \in I$
-- Example
-    - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
-    - $If \ x_1 = 1, \ then \ \tau_1 \in \ New \ Training \ Data$
   
 Integer programming formulation
 ===============================
@@ -260,7 +250,7 @@ Integer programming formulation
 - Example
     - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
     - $Column^{(1)} = \{\tau_1, \tau_5, \tau_6 \}$  
-    - $\ If \ x_1 = 1, \ then \ \{\tau_1, \tau_5, \tau_6 \} \in \ New \ Training \ Data$
+    - $\ If \ x_1 = 1, \ then \ \{\tau_1, \tau_5, \tau_6 \} \subseteq \ New \ Training \ Data$
 
 Integer programming formulation
 ===============================
@@ -636,7 +626,91 @@ An approximation (or two)
 
 ***High ranking instances are those that appear frequently***
 
+An approximation (or two)
+==================
+transition: none
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/solution.png" width=700 height=500>   
+</div> 
 
+An approximation (or two)
+==================
+transition: none
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/solution.png" width=700 height=500>   
+</div> 
+
+**A greedy selection procedure is used to combine columns into a final selection of instances**
+
+Integer programming formulation
+===============================  
+**Formulation 1**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}a_{ij}x_j \le 1 \ \ \forall \ i \in I$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+**Encourages the discovery of columns that have similar instances but higher accuracy** 
+
+Integer programming formulation
+================================
+**Formulation 2**  
+
+$\mathbf {Max} \ \ \ \sum_{j \in J}c_jx_j$
+
+$\mathbf {s.t}$
+
+$\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
+
+**Discovers columns that have higher accuracy than any previously discovered column** 
+
+Outline
+=========  
+1.  Motivation
+2.  Methodology 
+3.  Experimental results
+    - **Overall results**  
+    - Overfitting
+    - Successes  
+    - Case study
+4.  Impact  
+
+Overall Results
+=============================
+|               Name | Instances | Attributes | Numeric | Nominal | Classes |
+|-------------------:|-----------|------------|---------|---------|---------|
+| Balance            | 625       | 4          | Yes     | No      | 3       |
+| Credit             | 690       | 15         | Yes     | Yes     | 2       |
+| Diabetes           | 768       | 8          | Yes     | No      | 2       |
+| Ecoli              | 336       | 7          | Yes     | No      | 8       |
+| Glass              | 214       | 9          | Yes     | No      | 6       |
+| Horse              | 368       | 21         | Yes     | Yes     | 3       |
+| Ionosphere         | 351       | 34         | Yes     | No      | 2       |
+| LandSat*           | 444       | 36         | Yes     | No      | 6       |
+| Spect              | 267       | 22         | No      | Yes     | 2       |
+| Tic-tac-toe        | 958       | 9          | No      | Yes     | 2       |
+| Waveform           | 800       | 21         | Yes     | No      | 3       |
+| Wisc Cancer        | 699       | 9          | Yes     | No      | 2       |
+
+Overall Results
+============================
+
+Instance selection is performed for:  
+
+- Naive Bayes (NB)  
+- Logistic Regression (LR)  
+- Decision Tree (DT)  
+
+Approach:  
+
+- 20 replications
+- Paired-t test for difference of mean before and after instance selection
 
 Overall Results
 =============================
@@ -650,6 +724,30 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/results1.png" width=500 height=1200>
 </div>   
 
+Outline
+=========  
+1.  Motivation
+2.  Methodology 
+3.  Experimental results
+    - Overall results 
+    - **Overfitting**
+    - Successes  
+    - Case study
+4.  Impact 
 
+
+
+
+
+
+Integer programming formulation
+===============================
+
+**Old decison variables**  
+- Should instance $i$ be included in the training data?
+- $\ x_i \in \{0,1\} \ \forall \ i \in I$
+- Example
+    - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
+    - $If \ x_1 = 1, \ then \ \tau_1 \subseteq \ New \ Training \ Data$
 
 
