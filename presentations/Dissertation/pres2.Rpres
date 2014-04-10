@@ -773,6 +773,14 @@ The selected instances depend on
 
 Successes
 ===============================
+- Credit dataset
+    - Classify customers as having good or bad credit  
+    - Naive Bayes benefited from instance selection
+    
+- Instances with extreme values were removed  
+
+Successes
+===============================  
 
 
 
