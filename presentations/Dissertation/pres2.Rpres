@@ -749,6 +749,30 @@ Overfitting
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/notoverfitting.png" width=900 height=400>
 </div> 
 
+Outline
+=========  
+1.  Motivation
+2.  Methodology 
+3.  Experimental results
+    - Overall results 
+    - Overfitting
+    - **Successes**  
+    - Case study
+4.  Impact 
+
+
+Successes
+===============================
+
+The selected instances depend on
+
+- The Classifier
+- The Data
+
+**Instance selection is used as a wrapper**
+
+Successes
+===============================
 
 
 
