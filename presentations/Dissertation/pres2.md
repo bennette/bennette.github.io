@@ -735,6 +735,12 @@ Outline
     - Case study
 4.  Impact 
 
+Overfitting
+=======================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/overfitting.png" width=900 height=400>
+</div> 
 
 
 
