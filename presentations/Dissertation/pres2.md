@@ -454,19 +454,19 @@ Column generation
 ================================
 transition: none
 $Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
-$Column^{(1)} = \{ \tau_1 \}$  
-$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+$Column^{(2)} = \{ \tau_1 \}$  
+$Column^{(6)} = \{ \tau_1, \tau_3 \}$
 
 
 
-$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2$
+$\mathbf {Max} \ \ \ \ 0.6x_2 + 0.7x_6$
 
 $\mathbf {s.t}$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 \le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 \le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_2 + 1x_6 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 0x_6 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 1x_6 \le 1$  
 <br>
-$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2 \in \{0,1\}$ 
+$\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_2, x_6$ 
 
 ***  
 
@@ -474,43 +474,136 @@ Column generation
 ================================
 transition: none
 $Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
-$Column^{(1)} = \{ \tau_1 \}$  
-$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+$Column^{(2)} = \{ \tau_1 \}$  
+$Column^{(6)} = \{ \tau_1, \tau_3 \}$
 
 
 
-$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2$
+$\mathbf {Max} \ \ \ \ 0.6x_2 + 0.7x_6$
 
 $\mathbf {s.t}$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 \le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 \le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_2 + 1x_6 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 0x_6 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 1x_6 \le 1$  
 <br>
-$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2 \in \{0,1\}$ 
+$\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_2, x_6$ 
 
 ***  
 
 <br><br><br><br><br><br><br>  
-<font color="red">---></font> Column generation can <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;discover a new column 
+<font color="red">---></font> Solve and get shadow  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;price 
+
 
 Column generation
 ================================
 transition: none
 $Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
-$Column^{(1)} = \{ \tau_1 \}$  
-$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+$Column^{(2)} = \{ \tau_1 \}$  
+$Column^{(6)} = \{ \tau_1, \tau_3 \}$
+
+
+
+$\mathbf {Max} \ \ \ \ 0.6x_2 + 0.7x_6$
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_2 + 1x_6 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 0x_6 \le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 1x_6 \le 1$  
+<br>
+$\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_2, x_6$ 
+
+***  
+
+<br><br><br><br><br><br><br>  
+<font color="red">---></font> $\pi^*=\{0.6, 0, 0.1\}$ 
+
+Column generation
+======================================
+transition:none
+**Price out problem**  
+
+$\mathbf {Max} \ \ \ \  c^{new} - (0.6a_1+0a_2+0.1a_3)$ 
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ a_1 + a_2 + a_3\le 3$  
+$\ \ \ \ \ \ \ \ \ \ \ \ a_1, a_2, a_3 \in \{0,1\}$  
+<small><small> 
+
+| Column         | $a_1$ | $a_2$ | $a_3$ | $c^{new}$ |
+|----------------|-------|-------|-------|-----------|
+| $Column^{(1)}$ | 0     | 0     | 0     | 0.30      |
+| $Column^{(3)}$ | 0     | 1     | 0     | 0.60      |
+| $Column^{(4)}$ | 0     | 0     | 1     | 0.60      |
+| $Column^{(5)}$ | 1     | 1     | 0     | 0.50      |
+| $Column^{(7)}$ | 0     | 1     | 1     | 0.70      |
+| $Column^{(8)}$ | 1     | 1     | 1     | 0.70      |
+  
+</small></small>
+
+Column generation
+======================================
+transition:none
+**Price out problem**  
+
+$\mathbf {Max} \ \ \ \  c^{new} - (0.6a_1+0a_2+0.1a_3)$ 
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ a_1 + a_2 + a_3\le 3$  
+$\ \ \ \ \ \ \ \ \ \ \ \ a_1, a_2, a_3 \in \{0,1\}$  
+<small><small> 
+
+| Column         | $a_1$ | $a_2$ | $a_3$ | $c^{new}$ | Obj
+|----------------|-------|-------|-------|-----------|-----
+| $Column^{(1)}$ | 0     | 0     | 0     | 0.30      |0.30
+| $Column^{(3)}$ | 0     | 1     | 0     | 0.60      |0.60
+| $Column^{(4)}$ | 0     | 0     | 1     | 0.60      |0.50
+| $Column^{(5)}$ | 1     | 1     | 0     | 0.50      |-0.10
+| $Column^{(7)}$ | 0     | 1     | 1     | 0.70      |0.60
+| $Column^{(8)}$ | 1     | 1     | 1     | 0.70      |0.00
+  
+</small></small>
+
+Column generation
+======================================
+transition:none
+**Price out problem**  
+
+$\mathbf {Max} \ \ \ \  c^{new} - (0.6a_1+0a_2+0.1a_3)$ 
+
+$\mathbf {s.t}$  
+$\ \ \ \ \ \ \ \ \ \ \ \ a_1 + a_2 + a_3\le 3$  
+$\ \ \ \ \ \ \ \ \ \ \ \ a_1, a_2, a_3 \in \{0,1\}$  
+<small><small> 
+
+| Column         | $a_1$ | $a_2$ | $a_3$ | $c^{new}$ | Obj
+|----------------|-------|-------|-------|-----------|-----
+| $Column^{(1)}$ | 0     | 0     | 0     | 0.30      |0.30
+| **$Column^{(3)}$** | **0**     | **1**     | **0**     | **0.60**      |**0.60**
+| $Column^{(4)}$ | 0     | 0     | 1     | 0.60      |0.50
+| $Column^{(5)}$ | 1     | 1     | 0     | 0.50      |-0.10
+| $Column^{(7)}$ | 0     | 1     | 1     | 0.70      |0.60
+| $Column^{(8)}$ | 1     | 1     | 1     | 0.70      |0.00
+  
+</small></small>
+
+Column generation
+================================
+transition: none
+$Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
+$Column^{(2)} = \{ \tau_1 \}$  
+$Column^{(6)} = \{ \tau_1, \tau_3 \}$
 $Column^{(3)} = \{ \tau_2 \}$
 
 
-$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2 + 0.5x_3$
+$\mathbf {Max} \ \ \ \ 0.6x_2 + 0.7x_6 + 0.6x_3$
 
 $\mathbf {s.t}$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 + 0x_3\le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 +1x_3\le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 +0x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_2 + 1x_6 + 0x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 0x_6 +1x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 1x_6 +0x_3\le 1$  
 <br>
-$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3 \in \{0,1\}$ 
+$\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_1, x_2, x_3$ 
 
 ***  
 
@@ -520,35 +613,24 @@ Column generation
 ================================
 transition: none
 $Training \ \ = \{\tau_1, \tau_2, \tau_3 \}$  
-$Column^{(1)} = \{ \tau_1 \}$  
-$Column^{(2)} = \{ \tau_1, \tau_3 \}$
+$Column^{(2)} = \{ \tau_1 \}$  
+$Column^{(6)} = \{ \tau_1, \tau_3 \}$
 $Column^{(3)} = \{ \tau_2 \}$
 
 
-$\mathbf {Max} \ \ \ \ 0.6x_1 + 0.7x_2 + 0.5x_3$
+$\mathbf {Max} \ \ \ \ 0.6x_2 + 0.7x_6 + 0.6x_3$
 
 $\mathbf {s.t}$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 1x_1 + 1x_2 + 0x_3\le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 +1x_3\le 1$  
-$\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 +0x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 1x_2 + 1x_6 + 0x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 0x_6 +1x_3\le 1$  
+$\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 1x_6 +0x_3\le 1$  
 <br>
-$\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3 \in \{0,1\}$ 
-
+$\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_1, x_2, x_3$
 *** 
 <br><br><br><br><br><br><br><br><br>
 <font color="red">---></font> Column generation can <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue until the <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optimal solution is found
-
-Column generation
-================================
-Column generation is a solution technique used for huge linear programs (LP) 
- 
-1.  Relax IP to LP  
-2.  Create initial columns for the LP  (columns we think are good)
-3.  Solve the reduced LP  
-4.  Supply the dual solution to a price out problem
-4.  If improving column is found add it to the reduced LP and go back to Step 3, else stop
 
 Outline
 =========
@@ -766,21 +848,63 @@ Successes
 
 The selected instances depend on
 
-- The Classifier
-- The Data
+- The classifier
+- The data
 
 **Instance selection is used as a wrapper**
+  - Outliers?  
+  - Overlapping classes?  
+  - Minority classes?  
 
-Successes
+Credit dataset
 ===============================
-- Credit dataset
-    - Classify customers as having good or bad credit  
-    - Naive Bayes benefited from instance selection
+- Classify customers as having good or bad credit  
+- Naive Bayes gained on average 5 percentage points
     
-- Instances with extreme values were removed  
+**Instances with extreme values were removed** 
 
-Successes
+
+Credit dataset
 ===============================  
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/extreme.png" width=900 height=400>
+</div>
+
+Credit dataset
+===============================  
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/tree_before.png" width=900 height=400>
+</div>
+
+Credit dataset
+===============================  
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/tree_after.png" width=400 height=500>
+</div>
+
+Credit dataset
+===============================  
+incremental: true
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/a14.png" width=900 height=400>
+</div>
+
+ - **Allowed naive Bayes to focus on the majority of the instances**
+ - **Perhaps benefitted from the easy to find seperation in A14 after instance selection**
+
+Landsat dataset
+==============================  
+- Classify pixels of an image
+- Logistic regression improved from 65% to 80%
+
+
+Landsat dataset
+==============================  
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/pca1.png" width=400 height=500>
+</div>
+
 
 
 
