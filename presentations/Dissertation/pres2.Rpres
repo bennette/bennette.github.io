@@ -1302,21 +1302,15 @@ Interesting
 <span style ="position:absolute;right:0;bottom:0">64 / 64</span>
 </small></small></small></small>
 
-Aha!
-=============
-
-Instance selection is not about the shortcomings of data, but rather the shortcomings of today's classifiers.  However, even if the perfect classifier existed it would likely 
+Thats all folks!
+======================
 
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/woops.gif" width=550 height=600>
+</div> 
 
-Integer programming formulation
-===============================
-
-**Old decison variables**  
-- Should instance $i$ be included in the training data?
-- $\ x_i \in \{0,1\} \ \forall \ i \in I$
-- Example
-    - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
-    - $If \ x_1 = 1, \ then \ \tau_1 \subseteq \ New \ Training \ Data$
-
-
+Questions?
+======================
+Walter Bennette  
+bennette@iastate.edu
