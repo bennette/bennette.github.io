@@ -323,6 +323,7 @@ Integer programming formulation
 - Example
     - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
     - $Column^{(1)} = \{\tau_1, \tau_5, \tau_6 \}$  
+    - $Column^{(1)} \ accuracy= c_1$
     - $\ If \ x_1 = 1, \ then \ \{\tau_1, \tau_5, \tau_6 \} \subseteq \ New \ Training \ Data$
     
 <small><small><small><small>
@@ -552,8 +553,9 @@ Integer programming formulation
 For Formulation 1 and Formulation 2, a dataset of size $n$ has $2^n$ columns
 
 **Solution**  
-- Begin with a good set of columns and use column generation to find improvements  
-- Relies on feedback from the classifier and dataset to define improvement
+1.  Begin with a good set of initial columns      
+2.  Use column generation to find improvements    
+ 
 
 
 <small><small><small><small>
@@ -989,7 +991,7 @@ Instance selection is performed for:
 Approach:  
 
 - 20 replications
-- Paired-t test for difference of mean before and after instance selection
+- Paired-t test for difference of accuracy before and after instance selection
 
 <small><small><small><small>
 <span style ="position:absolute;right:0;bottom:0">40 / 64</span>
@@ -1289,7 +1291,7 @@ Future work
 Obvious  
 - Improve classifier accuracy estimate  
 - Address overfitting  
-- Accomidate bigger datasets  
+- Accommodate bigger datasets  
 
 Interesting  
 - Optimize other metrics  

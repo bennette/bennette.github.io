@@ -8,6 +8,7 @@ image:
   feature: saultIII.jpg
 ---
 
+* [Dissertation](/presentations/Dissertation)
 * [ENGR 160](/presentations/ENGR160)
 * [Data Mining Group](/presentations/Data_Mining_Group)
 * [IE 312- An integer programming application](/presentations/IE312)
