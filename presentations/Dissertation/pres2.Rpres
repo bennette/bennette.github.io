@@ -879,7 +879,7 @@ Credit dataset
 Credit dataset
 ===============================  
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/tree_after.png" width=400 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/tree_after.png" width=300 height=400>
 </div>
 
 Credit dataset
@@ -905,9 +905,26 @@ Landsat dataset
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/pca1.png" width=400 height=500>
 </div>
 
+***
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/pca2.png" width=400 height=500>
+</div>
 
 
 
+
+Landsat
+==============================
+incremental: true
+**Number of test instances misclassified**
+
+|                         | Class1 | Class2 | Class3 | Class4 | Class5 | Class6 | Total |
+|-------------------------|---------|---------|---------|---------|---------|---------|-------|
+| Original Training Data  | 5       | 9       | 11      | 9       | 8       | 9       | 51    |
+| With Instance Selection | 1       | 3       | 3       | 14      | 5       | 2       | 28    |
+
+-  The ability to classify the minority class 4 is likely sacrificed in an effort to make it easier to seperate the remaining classes
 
 Integer programming formulation
 ===============================
