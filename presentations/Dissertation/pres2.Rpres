@@ -2,14 +2,14 @@
 Instance selection for model-based classifiers
 ========================================================  
 author: Walter Bennette
-date: 04-15-2014
+date: 04-11-2014
  
 Take away message
 ================
 Model-based classifiers with improved accuracy can be created by learning from carefully selected instances.
 
 <small><small><small><small>
-<span style ="position:absolute;left:0;bottom:0">1 / </span>
+<span style ="position:absolute;right:0;bottom:0">1 / 64</span>
 </small></small></small></small>
 
 Outline
@@ -17,7 +17,7 @@ Outline
 1.  Motivation
 2.  Methodology 
 3.  Experimental results  
-4.  Impact
+4.  Conclusion
 
 Motivation
 =======================
@@ -31,11 +31,17 @@ Better classifiers are beneficial
 - Make fewer missclassifications
 - Gain useful knowledge when analyzing the classifier
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">3 / 64</span>
+</small></small></small></small>
 Motivation
 ================================================
 
-- Aspects of a training dataset may make it difficult to build/induce/learn an accurate classifier.  
+- Aspects of a training dataset may make it difficult to build/induce/learn an accurate classifier  
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">4 / 64</span>
+</small></small></small></small>
 
 Motivation
 ================================================
@@ -48,6 +54,10 @@ Classes may overlap
 
 Where should these classes be separated?
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">5 / 64</span>
+</small></small></small></small>
+
 Motivation
 ================================================
 transition: none
@@ -59,6 +69,9 @@ Classes may overlap
 
 Where should these classes be separated?
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">5 / 64</span>
+</small></small></small></small>
 
 Motivation
 ================================================
@@ -71,6 +84,10 @@ Classes may overlap
 
 Where should these classes be separated?
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">5 / 64</span>
+</small></small></small></small>
+
 Motivation
 ================================================
 transition: none
@@ -80,7 +97,11 @@ Classes may overlap
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap4.png" width=700 height=400>
 </div>
 
-Where should these classes be separated?
+Where should these classes be separated?  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">5 / 64</span>
+</small></small></small></small>
 
 Motivation
 ================================================
@@ -91,7 +112,11 @@ Classes may have outliers
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers1.png" width=700 height=400>
 </div>
 
-Should these outliers be accommodated?
+Should these outliers be accommodated?  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">6 / 64</span>
+</small></small></small></small>
 
 Motivation
 ================================================
@@ -102,7 +127,11 @@ Classes may have outliers
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers2.png" width=700 height=400>
 </div>
 
-Should these outliers be accommodated?
+Should these outliers be accommodated?  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">6 / 64</span>
+</small></small></small></small>
 
 Motivation
 ================================================
@@ -113,7 +142,11 @@ Minority class
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/minority1.png" width=700 height=400>
 </div>
 
-Does capturing the minority class introduce unnecessary structure?
+Does capturing the minority class introduce unnecessary structure?  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">7 / 64</span>
+</small></small></small></small>
 
 Motivation
 ================================================
@@ -126,11 +159,18 @@ Minority class
 
 Does capturing the minority class introduce unnecessary structure?
  
- 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">7 / 64</span>
+</small></small></small></small>
+
 Motivation
 ================================================
 
 - We believe that selecting which instances to learn from can improve the accuracy of a classifier.  This is called ***instance selection***!
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">8 / 64</span>
+</small></small></small></small>
 
 Outline
 =========  
@@ -140,7 +180,7 @@ Outline
     - Previous work
     - Integer programming formulation
 3.  Experimental results  
-4.  Impact
+4.  Conclusion
 
 Instance selection
 =============================
@@ -148,6 +188,10 @@ Instance selection
 - Instance selection addresses issues in the training data by creating a subset of the original data
 
 - The intention is that the classification algorithm will perform better when learning from the selected/reduced data set
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">10 / 64</span>
+</small></small></small></small>
 
 Instance selection
 =============================
@@ -157,13 +201,21 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain1.png" width=900 height=500>
 </div>
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">11 / 64</span>
+</small></small></small></small>
+
 Instance selection
 =============================
 transition: none
 
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain2.png" width=900 height=500>
-</div>
+</div>  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">11 / 64</span>
+</small></small></small></small>
 
 Instance selection
 =============================
@@ -173,12 +225,20 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain3.png" width=900 height=500>
 </div>
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">11 / 64</span>
+</small></small></small></small>
+
 Instance selection
 =============================
 
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=800 height=450>
 </div>
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">12 / 64</span>
+</small></small></small></small>
 
 Instance selection
 ===============
@@ -188,6 +248,9 @@ Instance selection
 - For a dataset of size $n$ there are $2^n$ solutions
 - There is no closed form objective function to maximize classifier accuracy
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">13 / 64</span>
+</small></small></small></small>
 
 Outline
 =========  
@@ -197,7 +260,7 @@ Outline
     - **Previous work**
     - Integer programming formulation
 3.  Experimental results  
-4.  Impact
+4.  Conclusion
 
 Previous work
 =============================
@@ -213,6 +276,9 @@ Previous work
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/knn2.png" width=500 height=1200>
 </div>
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">15 / 64</span>
+</small></small></small></small>
 
 Previous work
 ============================= 
@@ -224,12 +290,19 @@ ${\mathbf {Max} \ \ \ \ Classifier \ Accuracy \\ \mathbf {s.t}  \\ \ \ \ \ \ \ \
 * There are $2^n$ possible solutions  
 * There is no closed form for the objective function
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">16 / 64</span>
+</small></small></small></small>
 
 Previous work
 =============================   
 - A **VAST** majority rely on evolutionary algorithms to find a solution
 
-- Other optimization problems look similar to instance selection if **the problem is reformulated**.  This allows us to **take advantage of optimization theory**. 
+- Other optimization problems look similar to instance selection if **the problem is reformulated**.  This allows us to **take advantage of optimization theory**.
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">17 / 64</span>
+</small></small></small></small>
  
 Outline
 =========
@@ -239,7 +312,7 @@ Outline
     - Previous work
     - **Integer programming formulation**
 3.  Experimental results  
-4.  Impact 
+4.  Conclusion 
   
 Integer programming formulation
 ===============================
@@ -251,6 +324,10 @@ Integer programming formulation
     - $Training \ Data = \{\tau_1, \tau_2, ..., \tau_n   \}$
     - $Column^{(1)} = \{\tau_1, \tau_5, \tau_6 \}$  
     - $\ If \ x_1 = 1, \ then \ \{\tau_1, \tau_5, \tau_6 \} \subseteq \ New \ Training \ Data$
+    
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">19 / 64</span>
+</small></small></small></small>
 
 Integer programming formulation
 ===============================
@@ -267,7 +344,11 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 
 ***
 <br><br><br><br>
-&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">20 / 64</span>
+</small></small></small></small>
 
 Integer programming formulation
 ===============================
@@ -284,7 +365,11 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 
 ***  
 <br><br><br><br><br><br><br>  
-&nbsp; &nbsp; <font color="red"><---</font>A column is <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; associated with each <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; possible subset of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; instances  
+&nbsp; &nbsp; <font color="red"><---</font>A column is <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; associated with each <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; possible subset of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; instances 
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">20 / 64</span>
+</small></small></small></small>
 
 Integer programming formulation
 ===============================
@@ -304,6 +389,10 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 <br><br><br><br><br>  
 &nbsp; &nbsp; &nbsp; <font color="red"><---</font> $a_{ij}$ indicates if instance<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$i \$ is in column $\ j$
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">20 / 64</span>
+</small></small></small></small>
+
 
 Integer programming formulation
 ===============================
@@ -320,7 +409,11 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 
 *** 
 <br><br>
-&nbsp; &nbsp; &nbsp; <font color="red"><---</font> $c_j$ is the accuracy of a <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; classifier built from <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the contents in column <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$\ j$
+&nbsp; &nbsp; &nbsp; <font color="red"><---</font> $c_j$ is the accuracy of a <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; classifier built from <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the contents in column <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$\ j$  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">20 / 64</span>
+</small></small></small></small>
 
 Integer programming formulation
 ================================
@@ -331,7 +424,7 @@ $Column^{(2)}=\{\tau_1 \}$
 $Column^{(3)}=\{\tau_2 \}$   
 $Column^{(4)}=\{\tau_1, \tau_2 \}$  
 
-<br>
+
 $\mathbf {Max} \ \ \ \ 0.3x_1 + 0.7x_2 + 0.5x_3 + 0.6x_4$
 
 $\mathbf {s.t}$
@@ -340,6 +433,10 @@ $\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 1x_2 + 0x_3 + 1x_4 \le 1$
 $\ \ \ \ \ \ \ \ \ \ \ \ 0x_1 + 0x_2 + 1x_3 + 1x_4 \le 1$  
 <br>
 $\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3, x_4 \in \{0,1\}$ 
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">21 / 64</span>
+</small></small></small></small>
 
 
 Integer programming formulation
@@ -357,7 +454,11 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 
 ***
 <br><br><br><br>
-&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">22 / 64</span>
+</small></small></small></small>
 
 Integer programming formulation
 ================================
@@ -377,6 +478,10 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 <br><br><br><br><br><br><br>   
 &nbsp; &nbsp; <font color="red"><---</font>A column is <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; associated with each <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; possible subset of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; instances
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">22 / 64</span>
+</small></small></small></small>
+
 Integer programming formulation
 ================================
 transition: none
@@ -395,6 +500,10 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 <br><br><br><br><br><br> 
 &nbsp; &nbsp; &nbsp;  <font color="red"><---</font> Select at most one <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;column
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">22 / 64</span>
+</small></small></small></small>
+
 Integer programming formulation
 ================================
 transition: none
@@ -412,6 +521,10 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 <br>  
 &nbsp; &nbsp; &nbsp; <font color="red"><---</font> $c_j$ is the accuracy of a <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; classifier built from <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the contents of <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; column $\ j$
  
+ <small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">22 / 64</span>
+</small></small></small></small>
+ 
 Integer programming formulation
 ================================
 **Example**    
@@ -421,7 +534,6 @@ $Column^{(2)}=\{\tau_1 \}$
 $Column^{(3)}=\{\tau_2 \}$   
 $Column^{(4)}=\{\tau_1, \tau_2 \}$  
 
-<br>
 $\mathbf {Max} \ \ \ \ 0.3x_1 + 0.7x_2 + 0.5x_3 + 0.6x_4$
 
 $\mathbf {s.t}$
@@ -430,13 +542,23 @@ $\ \ \ \ \ \ \ \ \ \ \ \ x_1 + x_2 + x_3 + x_4 \le 1$
 <br>
 $\ \ \ \ \ \ \ \ \ \ \ \ x_1, x_2, x_3, x_4 \in \{0,1\}$ 
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">23 / 64</span>
+</small></small></small></small>
+
 Integer programming formulation
 ================================
 **Issue**  
 For Formulation 1 and Formulation 2, a dataset of size $n$ has $2^n$ columns
 
 **Solution**  
-Begin with a good selection of columns and use column generation to find improvements  
+- Begin with a good set of columns and use column generation to find improvements  
+- Relies on feedback from the classifier and dataset to define improvement
+
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">24 / 64</span>
+</small></small></small></small>
 
 Outline
 =========
@@ -448,7 +570,7 @@ Outline
         - **Column generation**  
         - An approximation
 3.  Experimental results  
-4.  Impact 
+4.  Conclusion 
 
 Column generation
 ================================
@@ -468,7 +590,11 @@ $\ \ \ \ \ \ \ \ \ \ \ \ 0x_2 + 1x_6 \le 1$
 <br>
 $\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_2, x_6$ 
 
-***  
+***
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">26 / 64</span>
+</small></small></small></small>
 
 Column generation
 ================================
@@ -491,9 +617,13 @@ $\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_2, x_6$
 ***  
 
 <br><br><br><br><br><br><br>  
-<font color="red">---></font> Solve and get shadow  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;price 
+<font color="red">---></font> Solve and get dual  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variables 
 
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">26 / 64</span>
+</small></small></small></small>
 
 Column generation
 ================================
@@ -518,6 +648,10 @@ $\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_2, x_6$
 <br><br><br><br><br><br><br>  
 <font color="red">---></font> $\pi^*=\{0.6, 0, 0.1\}$ 
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">26 / 64</span>
+</small></small></small></small>
+
 Column generation
 ======================================
 transition:none
@@ -540,6 +674,10 @@ $\ \ \ \ \ \ \ \ \ \ \ \ a_1, a_2, a_3 \in \{0,1\}$
 | $Column^{(8)}$ | 1     | 1     | 1     | 0.70      |
   
 </small></small>
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">27 / 64</span>
+</small></small></small></small>
 
 Column generation
 ======================================
@@ -564,6 +702,10 @@ $\ \ \ \ \ \ \ \ \ \ \ \ a_1, a_2, a_3 \in \{0,1\}$
   
 </small></small>
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">27 / 64</span>
+</small></small></small></small>
+
 Column generation
 ======================================
 transition:none
@@ -585,7 +727,11 @@ $\ \ \ \ \ \ \ \ \ \ \ \ a_1, a_2, a_3 \in \{0,1\}$
 | $Column^{(7)}$ | 0     | 1     | 1     | 0.70      |0.60
 | $Column^{(8)}$ | 1     | 1     | 1     | 0.70      |0.00
   
-</small></small>
+</small></small>  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">27 / 64</span>
+</small></small></small></small>
 
 Column generation
 ================================
@@ -607,6 +753,9 @@ $\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_1, x_2, x_3$
 
 ***  
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">28 / 64</span>
+</small></small></small></small>
 
 
 Column generation
@@ -632,6 +781,10 @@ $\ \ \ \ \ \ \ \ \ \ \ \ 0 \le x_1, x_2, x_3$
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue until the <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optimal solution is found
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">28 / 64</span>
+</small></small></small></small>
+
 Outline
 =========
 1.  Motivation
@@ -642,7 +795,7 @@ Outline
         - Column generation  
         - **An approximation**
 3.  Experimental results  
-4.  Impact 
+4.  Conclusion 
 
 An approximation (or two)
 ==================
@@ -652,7 +805,11 @@ From the price out problem:
 $\mathbf {Max} \ \ \ \  c^{new} - \pi^Ta^{new}$  
 
 
-An **approximation of $c^{new}$ based on $a^{new}$** is necesary to implement column generation
+An **approximation of $c^{new}$ based on $a^{new}$** is necessary to implement column generation
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">30 / 64</span>
+</small></small></small></small>
 
 An approximation (or two)
 ==================
@@ -662,12 +819,20 @@ From the price out problem:
 $\mathbf {Max} \ \ \ \  c^{new} - \pi^Ta^{new}$  
 
 
-An **approximation of classifier accuracy based on the contents of its training data** is necesary to implement column generation
+An **approximation of classifier accuracy based on the contents of its training data** is necessary to implement column generation
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">30 / 64</span>
+</small></small></small></small>
 
 An approximation (or two)
 =====================
 
 Two approximations are developed.  Each creates a ranking of the instances and assumes **columns with high ranking instances will have high accuracy**.
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">31 / 64</span>
+</small></small></small></small>
 
 An approximation (or two)
 ==================
@@ -686,6 +851,10 @@ An approximation (or two)
     - 1 means the classifier is great at classifying the instance 
     - 0 means it is confused  
     - -1 means it is horrible
+    
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">32 / 64</span>
+</small></small></small></small>
 
 An approximation (or two)
 ==================
@@ -696,7 +865,11 @@ An approximation (or two)
 2. Sum $Bh_{\tau}\$ from a classifier built with a subset of the instances
 3. Attribute the difference to the missing instances
 
-***High ranking instances are those that decrease the value of $Bh$***
+***High ranking instances are those that decrease the value of $Bh$***  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">33 / 64</span>
+</small></small></small></small>
 
 An approximation (or two)
 ==================
@@ -704,16 +877,13 @@ An approximation (or two)
 
 1.  Create initial columns
 2.  Identify columns with high accuracy
-3.  Count the occurences of instances in those columns
+3.  Count the occurrences of instances in those columns
 
-***High ranking instances are those that appear frequently***
+***High ranking instances are those that appear frequently***  
 
-An approximation (or two)
-==================
-transition: none
-<div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/solution.png" width=700 height=500>   
-</div> 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">34 / 64</span>
+</small></small></small></small>
 
 An approximation (or two)
 ==================
@@ -722,7 +892,22 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/solution.png" width=700 height=500>   
 </div> 
 
-**A greedy selection procedure is used to combine columns into a final selection of instances**
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">35 / 64</span>
+</small></small></small></small>
+
+An approximation (or two)
+==================
+transition: none
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/solution.png" width=700 height=500>   
+</div> 
+
+**A greedy selection procedure is used to combine columns into a final selection of instances**  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">35 / 64</span>
+</small></small></small></small>
 
 Integer programming formulation
 ===============================  
@@ -738,6 +923,10 @@ $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$
 
 **Encourages the discovery of columns that have similar instances but higher accuracy** 
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">36 / 64</span>
+</small></small></small></small>
+
 Integer programming formulation
 ================================
 **Formulation 2**  
@@ -750,7 +939,11 @@ $\ \ \ \ \ \ \ \ \ \ \sum_{j \in J}x_j \le 1$
 <br>
 $\ \ \ \ \ \ \ \ \ \ \ x_j \in \{0,1\} \ \ \forall \ j \in J$ 
 
-**Discovers columns that have higher accuracy than any previously discovered column** 
+**Discovers columns that have higher accuracy than any previously discovered column**  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">37 / 64</span>
+</small></small></small></small>
 
 Outline
 =========  
@@ -761,7 +954,7 @@ Outline
     - Overfitting
     - Successes  
     - Case study
-4.  Impact  
+4.  Conclusion  
 
 Overall Results
 =============================
@@ -780,6 +973,10 @@ Overall Results
 | Waveform           | 800       | 21         | Yes     | No      | 3       |
 | Wisc Cancer        | 699       | 9          | Yes     | No      | 2       |
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">39 / 64</span>
+</small></small></small></small>
+
 Overall Results
 ============================
 
@@ -794,6 +991,10 @@ Approach:
 - 20 replications
 - Paired-t test for difference of mean before and after instance selection
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">40 / 64</span>
+</small></small></small></small>
+
 Overall Results
 =============================
 transition: none
@@ -806,6 +1007,7 @@ transition: none
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/results1.png" width=500 height=1200>
 </div>   
 
+
 Outline
 =========  
 1.  Motivation
@@ -815,7 +1017,7 @@ Outline
     - **Overfitting**
     - Successes  
     - Case study
-4.  Impact 
+4.  Conclusion 
 
 Overfitting
 =======================
@@ -824,12 +1026,20 @@ Overfitting
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/overfitting.png" width=900 height=400>
 </div> 
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">43 / 64</span>
+</small></small></small></small>
+
 Overfitting
 =======================
 <br>
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/notoverfitting.png" width=900 height=400>
 </div> 
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">44 / 64</span>
+</small></small></small></small>
 
 Outline
 =========  
@@ -840,7 +1050,7 @@ Outline
     - Overfitting
     - **Successes**  
     - Case study
-4.  Impact 
+4.  Conclusion 
 
 
 Successes
@@ -856,6 +1066,10 @@ The selected instances depend on
   - Overlapping classes?  
   - Minority classes?  
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">46 / 64</span>
+</small></small></small></small>
+
 Credit dataset
 ===============================
 - Classify customers as having good or bad credit  
@@ -863,12 +1077,19 @@ Credit dataset
     
 **Instances with extreme values were removed** 
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">47 / 64</span>
+</small></small></small></small>
 
 Credit dataset
 ===============================  
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/extreme.png" width=900 height=400>
-</div>
+</div>  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">48 / 64</span>
+</small></small></small></small>
 
 Credit dataset
 ===============================  
@@ -876,11 +1097,19 @@ Credit dataset
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/tree_before.png" width=900 height=400>
 </div>
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">49 / 64</span>
+</small></small></small></small>
+
 Credit dataset
 ===============================  
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/tree_after.png" width=300 height=400>
-</div>
+</div>  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">50 / 64</span>
+</small></small></small></small>
 
 Credit dataset
 ===============================  
@@ -892,11 +1121,18 @@ incremental: true
  - **Allowed naive Bayes to focus on the majority of the instances**
  - **Perhaps benefitted from the easy to find seperation in A14 after instance selection**
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">51 / 64</span>
+</small></small></small></small>
+
 Landsat dataset
 ==============================  
 - Classify pixels of an image
 - Logistic regression improved from 65% to 80%
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">52 / 64</span>
+</small></small></small></small>
 
 Landsat dataset
 ==============================  
@@ -909,11 +1145,18 @@ Landsat dataset
 
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/pca2.png" width=400 height=500>
-</div>
+</div>  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">53 / 64</span>
+</small></small></small></small>
 
 Landsat
 ==============================
 incremental: true
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">54 / 64</span>
+</small></small></small></small>
 **Number of test instances misclassified**
 
 |                         | Class1 | Class2 | Class3 | Class4 | Class5 | Class6 | Total |
@@ -921,15 +1164,21 @@ incremental: true
 | Original Training Data  | 5       | 9       | 11      | 9       | 8       | 9       | 51    |
 | With Instance Selection | 1       | 3       | 3       | 14      | 5       | 2       | 28    |
 
--  The ability to classify the minority class 4 is likely sacrificed in an effort to make it easier to seperate the remaining classes
+-  The ability to classify the minority class 4 is likely sacrificed in an effort to make it easier to separate the remaining classes
 
 
-Successess
+
+
+Successes
 ==============================
 
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/compare.png" width=800 height=650>
-</div>
+</div>  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">55 / 64</span>
+</small></small></small></small>
 
 Outline
 =========  
@@ -940,14 +1189,18 @@ Outline
     - Overfitting
     - Successes 
     - **Case study**
-4.  Impact
+4.  Conclusion
 
 Case study
 ==============================
 
 A Population-based Assessment of Perioperative Mortality After Nephroureterectomy for Upper-tract Urothelial Carcinoma 
 
-***(I'll be calling this NU for UTUC!!)***
+***(I'll be calling this NU for UTUC!!)***  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">57 / 64</span>
+</small></small></small></small>
 
 Case study
 ==============================
@@ -964,7 +1217,11 @@ Classification task: predict mortality
 <br>  
 Classifier: logistic regression
 <br>  
-Instance selection:  maximize class balance accuracy
+Instance selection:  maximize class balance accuracy  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">58 / 64</span>
+</small></small></small></small>
 
 Case study
 ==============================
@@ -977,6 +1234,10 @@ Confusion matrix of test data before
 -  90% test accuracy  
 -  Uninformative!  
 
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">59 / 64</span>
+</small></small></small></small>
+
 Case study
 ==============================   
 Confusion matrix of test data after  
@@ -986,6 +1247,65 @@ Confusion matrix of test data after
 
 -  88% test accuracy  
 -  Learn something about mortality  
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">60 / 64</span>
+</small></small></small></small>
+
+Case study
+===============================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/case1.png" width=550 height=600>
+</div> 
+
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">61 / 64</span>
+</small></small></small></small> 
+
+Outline
+=========  
+1.  Motivation
+2.  Methodology 
+3.  Experimental results
+4.  **Conclusion**
+
+Conclusion
+===============================
+- Built optimization framework to solve instance selection  
+
+- **Model-based classifiers with improved accuracy can be created by learning from carefully selected instances** (because classifiers are imperfect)
+
+- Instance selection is useful for actual classification problems and is a competitive technique
+
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">63 / 64</span>
+</small></small></small></small>
+
+Future work
+==============================  
+
+Obvious  
+- Improve classifier accuracy estimate  
+- Address overfitting  
+- Accomidate bigger datasets  
+
+Interesting  
+- Optimize other metrics  
+    - Imbalanced data  
+    - Model simplicity  
+    
+<small><small><small><small>
+<span style ="position:absolute;right:0;bottom:0">64 / 64</span>
+</small></small></small></small>
+
+Aha!
+=============
+
+Instance selection is not about the shortcomings of data, but rather the shortcomings of today's classifiers.  However, even if the perfect classifier existed it would likely 
+
+
 
 Integer programming formulation
 ===============================
