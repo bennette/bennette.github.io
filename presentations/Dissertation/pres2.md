@@ -968,16 +968,24 @@ Instance selection:  maximize class balance accuracy
 
 Case study
 ==============================
+Confusion matrix of test data before  
 
-Confusion matrix before  
+   <div align="left">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/con1.png" width=300 height=200>
+</div> 
 
-|        |     | Predicted |       |
-|--------|-----|-----------|-------|
-|        |     | No        | Yes   |
-| Actual | No  | 0         | 74    |
-|        | Yes | 0         | 702   |  
+-  90% test accuracy  
+-  Uninformative!  
 
+Case study
+==============================   
+Confusion matrix of test data after  
+<div align="left">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/con2.png" width=300 height=200>
+</div> 
 
+-  88% test accuracy  
+-  Learn something about mortality  
 
 Integer programming formulation
 ===============================
