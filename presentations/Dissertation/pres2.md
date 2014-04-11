@@ -911,9 +911,6 @@ Landsat dataset
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/pca2.png" width=400 height=500>
 </div>
 
-
-
-
 Landsat
 ==============================
 incremental: true
@@ -925,6 +922,62 @@ incremental: true
 | With Instance Selection | 1       | 3       | 3       | 14      | 5       | 2       | 28    |
 
 -  The ability to classify the minority class 4 is likely sacrificed in an effort to make it easier to seperate the remaining classes
+
+
+Successess
+==============================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/compare.png" width=800 height=650>
+</div>
+
+Outline
+=========  
+1.  Motivation
+2.  Methodology 
+3.  Experimental results
+    - Overall results 
+    - Overfitting
+    - Successes 
+    - **Case study**
+4.  Impact
+
+Case study
+==============================
+
+A Population-based Assessment of Perioperative Mortality After Nephroureterectomy for Upper-tract Urothelial Carcinoma 
+
+***(I'll be calling this NU for UTUC!!)***
+
+Case study
+==============================
+
+Data: SEER database 
+<br>  
+Attributes: age, gender, histopathology, extraglandular<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; involvement, tumor grade, tumor size, and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mortality
+<br>  
+Patients: 2,328 (9% mortality)
+<br>  
+Classification task: predict mortality
+<br>  
+Classifier: logistic regression
+<br>  
+Instance selection:  maximize class balance accuracy
+
+Case study
+==============================
+
+Confusion matrix before  
+
+|        |     | Predicted |       |
+|--------|-----|-----------|-------|
+|        |     | No        | Yes   |
+| Actual | No  | 0         | 74    |
+|        | Yes | 0         | 702   |  
+
+
 
 Integer programming formulation
 ===============================
