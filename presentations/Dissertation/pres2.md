@@ -3,6 +3,11 @@ Instance selection for model-based classifiers
 ========================================================  
 author: Walter Bennette
 date: 04-11-2014
+
+Follow along
+========================================================
+
+[http://bennette.github.io/presentations/](http://bennette.github.io/presentations/) 
  
 Take away message
 ================
