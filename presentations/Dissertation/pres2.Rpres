@@ -1280,7 +1280,7 @@ Outline
 
 Conclusion
 ===============================
-- Built optimization framework to solve instance selection  
+- Reformulated instance selection as an integer program  
 
 - **Model-based classifiers with improved accuracy can be created by learning from carefully selected instances** (because classifiers are imperfect)
 
