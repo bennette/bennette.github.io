@@ -1400,3 +1400,41 @@ bennette@iastate.edu
 <small><small><small><small>
 <span style ="position:absolute;right:0;bottom:0">68 / 68</span>
 </small></small></small></small>
+
+
+Extras
+===========================
+e1071
+
+
+
+Extras
+===========================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_svm.png" width=900 height=550>
+</div> 
+
+Extras
+===========================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=550 height=550>
+</div> 
+
+Extras
+===========================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=550 height=550>
+</div> 
+
+Extras
+===========================
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_both.png" width=550 height=550>
+</div> 
+
+
+
