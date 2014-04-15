@@ -1402,38 +1402,49 @@ bennette@iastate.edu
 </small></small></small></small>
 
 
-Extras
+Extras (SVM)
 ===========================
 e1071
 
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/svm_show.png" width=900 height=550>
+</div> 
 
+Extras (Ionosphere)
+======================
 
-Extras
+train SVM: 92%  
+test SVM:  93%
+
+train NB/IS: 94%   
+test NB/IS:  97%
+
+Extras (Ionosphere)
 ===========================
 
 <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_svm.png" width=900 height=550>
 </div> 
 
-Extras
+Extras (Ionosphere)
 ===========================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=550 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=900 height=550>
 </div> 
 
-Extras
+Extras (Ionosphere)
 ===========================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=550 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=900 height=550>
 </div> 
 
-Extras
+Extras (Ionosphere)
 ===========================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_both.png" width=550 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_both.png" width=700 height=550>
 </div> 
 
 
