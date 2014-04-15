@@ -1410,34 +1410,34 @@ e1071
 <img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/svm_show.png" width=900 height=550>
 </div> 
 
-Extras (Ionosphere)
+Extras (Wisconsin Breast Cancer)
 ======================
 
-train SVM: 92%  
-test SVM:  93%
+train SVM: 98%  
+test SVM:  95%
 
-train NB/IS: 94%   
-test NB/IS:  97%
+train NB/IS: 98%   
+test NB/IS:  95%
 
-Extras (Ionosphere)
+Extras (Wisconsin Breast Cancer)
 ===========================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_svm.png" width=900 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/wisc_svm.png" width=900 height=550>
 </div> 
 
-Extras (Ionosphere)
+Extras (Wisconsin Breast Cancer)
 ===========================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=900 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/wisc IS.png" width=900 height=550>
 </div> 
 
-Extras (Ionosphere)
+Extras (Wisconsin Breast Cancer)
 ===========================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/IS_ion.png" width=900 height=550>
+<img class="decoded" src="http://bennette.github.io/presentations/Dissertation/images/wisc_all.png" width=900 height=550>
 </div> 
 
 Extras (Ionosphere)
