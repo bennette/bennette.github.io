@@ -20,22 +20,33 @@ Overview
 Problem Statement
 =========================
 
-The Army Reserve can be thouhgt of as a strategic reserve
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/IE 541/images/logo.gif" width=300 height=400>
+</div>
+
+The Army Reserve can be thouhgt of as a strategic reserve.
 
 
 Problem Statement
 =========================
 
-Question:  How are the troop levels determined for the Army and Army Reserve?  
+Question:  How is the size of the Army Reserve decided?  
 <br>
-Answer:  Closely gaurded secret or expert recommendations.   
+Answer:  Closely gaurded secret.   
 
-Junk
+Problem Statement
 ==========================
+type: alert
+We can use an inventory model to help aide in this decision. 
 
-Can we use an inventory model to help decide the number of troops to have in the Army and Army Reserve?  
+Background
+==========================
+Army Reserve:
 
-
+- Began in 1908   
+- 250,000 strong  
+- 38 days a year  
+- Can be called to active duty
 
 
 
