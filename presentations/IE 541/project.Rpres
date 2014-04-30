@@ -24,20 +24,35 @@ Problem Statement
 <img class="decoded" src="http://bennette.github.io/presentations/IE 541/images/logo.gif" width=300 height=400>
 </div>
 
-The Army Reserve can be thought of as a strategic reserve.
+The Army Reserve can be thought of as a strategic reserve for the Army.
 
 
 Problem Statement
 =========================
 
-Question:  How is the size of the Army Reserve decided?  
-<br>
-Answer:  ????  
+- Soldiers voluntarily join the Army Reserve  
+- Work/train 38 days per year
+- Receive some benefits  
+- Work a regular job  
+- Could be called into full time service
+
+**A relatively inexpensive inventory of soldiers ready for action**
+
+Problem Statement
+=========================
+transition:none  
+
+Question:  How many troops should be in the Army Reserve? 
+<br>  
+Answer:   
 
 Problem Statement
 ==========================
+transition: none  
 
-We can use the newsvendor problem to help aide in this decision. 
+Question:  How many troops should be in the Army Reserve?    
+<br>
+Answer:  Develop an inventory model to aide in this decision. 
 
 Background and Justification
 ==========================
@@ -46,10 +61,25 @@ Army Reserve:
 
 - Began in 1908 
 - 205,000 strong (compare to 541,000 in the Army) 
-- 38 days a year  
 - Can be called to active duty
+- Work 38 days a year  
+- $3,216 per year  
 
 Background and Justification
+==========================
+
+<a href="http://www.npr.org/2014/04/11/298316737/whats-the-right-size-for-the-u-s-army" target="_blank">Whats the right size for the US army?</a>
+<br> 
+- Current budget proposal calls for reduction  
+- Defense analyst thinks the size should increase  
+
+Background and Justification  
+============================
+
+- We can use an inventory model to find the economically opmtimal decision.  
+- This is crucial for fiscal responsibility  
+
+Model
 ============================
 
 Newsvendor:  
@@ -60,7 +90,7 @@ Newsvendor:
 - Holding cost  
 - Shortage cost 
 
-Background and Justification
+Model
 ============================
 
 **Newsvendor meets Army Reserve**
@@ -69,46 +99,64 @@ Products lose value after time:
 - Soldiers have a limitied shelf life.  
 - How many 90 year old soldiers do you know?    
 
-Background and Justification
+Model
 ============================
 transition: none
 **Newsvendor meets Army Reserve**  
 
 Only one opportunity to place an order:  
-- This is a simplifying assumption.  
+- This is a simplifying assumption  
 - How many would sign up during war?
 
 
-Background and Justification
+Model
 ============================
 transition: none
 **Newsvendor meets Army Reserve**  
 
 Only one opportunity to place an order:  
-- This is a simplifying assumption.  
+- This is a simplifying assumption  
 - How many would sign up during war?
  <div align="center">
 <img class="decoded" src="http://bennette.github.io/presentations/IE 541/images/buster.gif" width=500 height=300>
 </div>
 
-Background and Justification
+Model
 ============================
 
 **Newsvendor meets Army Reserve**
 
 Distribution of demand:  
+- Historical data  
+<br>
+
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/IE 541/images/distribution.png" width=500 height=300>
+</div>
+
+Model
+============================
+
+**Newsvendor meets Army Reserve**  
+
+Holding cost:  
+- Cost to recruit  
+- Cost to pay
+
+Model
+============================
+
+**Newsvendor meets Army Reserve**  
+
+Shortage cost:  
+- Unknown  
+- Loss of life and loss of freedoms
+- Can make a guess through analaysis
+
+Model
+===============================
 
 
-Background and Justification
-==========================
-
-Army Reserve:  
-
-- Soldiers have limited shelf life  
-- Assume only one order is placed  
-- Use historial data to model demand  
-- Know holding cost  
-- Unknown shortage cost  
 
 
 
