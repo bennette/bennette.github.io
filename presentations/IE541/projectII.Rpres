@@ -71,7 +71,7 @@ Background and Justification
 Background and Justification  
 ============================
 
-- We can use an inventory model to find the economically opmtimal decision.  
+- We can use an inventory model to find the economically optimal decision.  
 - This is crucial for fiscal responsibility  
 
 Model
@@ -91,7 +91,7 @@ transition: none
 **Newsvendor meets Army Reserve**
 
 Products lose value after time:  
-- Soldiers have a limitied shelf life. (Assume 8 years) 
+- Soldiers have a limited shelf life. (Assume 8 years) 
 - How many old soldiers do you know?   
 
 
@@ -101,7 +101,7 @@ transition: none
 **Newsvendor meets Army Reserve**
 
 Products lose value after time:  
-- Soldiers have a limitied shelf life. (Assume 8 years) 
+- Soldiers have a limited shelf life. (Assume 8 years) 
 - How many old soldiers do you know?   
 
  <div align="center">
@@ -163,7 +163,7 @@ Model
 Shortage cost:  
 - Unknown  
 - Loss of life and loss of freedoms
-- Can make a guess through analaysis
+- Can make a guess through analysis
 
 Analysis
 ===============================
