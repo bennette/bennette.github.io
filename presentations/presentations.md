@@ -13,4 +13,4 @@ image:
 * [ENGR 160](/presentations/ENGR160)
 * [IE 312- An integer programming application](/presentations/IE312)
 * [IE 501/601- Things I wish I knew](/presentations/IE601)
-* [IE 521- Inventory model for the Army Reserve](/presentations/IE541)
+* [IE 541- Inventory model for the Army Reserve](/presentations/IE541)
