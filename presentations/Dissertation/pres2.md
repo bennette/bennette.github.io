@@ -1224,7 +1224,7 @@ Landsat dataset
 <span style ="position:absolute;right:0;bottom:0">55 / 68</span>
 </small></small></small></small>
 
-Landsat
+Landsat dataset
 ==============================
 incremental: true
 <small><small><small><small>

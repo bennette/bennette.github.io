@@ -4,12 +4,12 @@ permalink: /about/index.html
 title: About Me
 tagline:
 tags: [about]
-modified: 11-15-2013
+modified: 09-04-2014
 image:
   feature: sault2.jpg
 ---
 ###Academic
-I am a Ph.D student in Industrial Engineering at Iowa State University.  My expected graduation date is May 2014.  My research focuses on the application of operations research techniques to data mining challenges.  In addition to operations research and data mining, I hold an interest in the meaningful visualization of data.
+I am a recent Ph.D graduate from Iowa State University where I studied Industrial Engineering.  My research focuses on the application of operations research techniques to data mining challenges.  In addition to operations research and data mining, I hold an interest in the meaningful visualization of data.
 
 ###Personal Interests
 - Family
