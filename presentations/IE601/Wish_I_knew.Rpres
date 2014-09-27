@@ -1,0 +1,206 @@
+Prepare to have your socks knocked off 
+========================================================
+author: Walter Bennette
+date: 01-19-2014 
+<br>
+<br>
+<br>
+[Click here for info on the meaning of the title...](http://www.urbandictionary.com/define.php?term=Knocks%20your%20socks%20off)
+<br>
+(WARNING!! This link will take you to a site with some rather adult words, but solid definitions for slang words and sayings)
+
+Follow along
+====================
+<br>
+<br>
+bennette.github.io
+
+Overview
+========================================================
+incremental: true
+I am going to cover
+
+- Who to ask for help
+- Preparing future faculty
+- My BEST Library search
+- Free money
+- Computing resources
+
+Overview
+========================================================
+I am going to cover
+
+- **Who to ask for help**
+- Preparing future faculty
+- My BEST Library search
+- Free money
+- Computing resources
+
+Who to ask for help
+========================================================
+incremental: true
+Lori Bushore
+<br>
+![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+
+- this
+- that
+- little of this
+
+Who to ask for help
+========================================================
+incremental: true
+Donna Cerka
+<br>
+![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+
+- this
+- that
+- little of this
+
+Who to ask for help
+========================================================
+incremental: true
+Krista Briley
+<br>
+![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+
+- this
+- that
+- little of this
+
+Who to ask for help
+========================================================
+incremental: true
+Jeff Eichorn
+<br>
+![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+
+- this
+- that
+- little of this
+
+Who to ask for help
+========================================================
+incremental: true
+Mike Renze
+<br>
+![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+
+- this
+- that
+- little of this
+
+Overview
+========================================================
+I am going to cover
+
+- Who to ask for help
+- **Preparing future faculty**
+- My BEST Library search
+- Free money
+- Computing resources
+
+Preparing future faculty
+==========================
+incremental: true
+
+http://www.celt.iastate.edu/pff/
+
+- 2nd year of Masters or PH.D
+- Applications due by 4th Monday in February
+- http://www.celt.iastate.edu/pff/potential.html
+
+
+Overview
+========================================================
+I am going to cover
+
+- Who to ask for help
+- Preparing future faculty
+- **My BEST Library search**
+- Free money
+- Computing resources
+
+My BEST Library search
+========================
+<br>
+<br>
+The website:
+<br>
+http://www.lib.iastate.edu/info/6268
+<br>
+<br>
+The search:
+<br>
+"Iowa State" AND AD(Olafsson, Sigurdur)
+
+Free Money
+========================================================
+I am going to cover
+
+- Who to ask for help
+- Preparing future faculty
+- My BEST Library search
+- **Free money**
+- Computing resources
+
+Free Money
+============================
+incremental: true
+
+You can get some money to go to conferences
+
+- one
+- two
+- three
+
+Free Money
+========================================================
+I am going to cover
+
+- Who to ask for help
+- Preparing future faculty
+- My BEST Library search
+- Free money
+- **Computing resources**
+
+Computing Resources
+=======================================
+
+![alt text][id10]
+
+[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+
+It looks like this, and you have important files on your computer from school
+
+Computing Resources
+=======================================
+
+Go to the following site and do your best
+
+- http://it.engineering.iastate.edu/remote-access/
+ 
+Computing Resources
+=======================================
+incremental: true
+
+If you are Yonghan Feng
+
+- You need LOTS of computers to run experiments on
+
+- http://it.engineering.iastate.edu/remote/
+- http://it.engineering.iastate.edu/nx/
+
+Thats it!
+===================

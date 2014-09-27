@@ -1,0 +1,39 @@
+# Site wide configuration
+
+title:            small data&#58;<br>big benefit
+title2:           Small data
+locale:           en_US
+#url:              http://localhost:4000
+url:             http://bennette.github.io
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: Walter Bennette
+  avatar: bio-photo.jpg
+  bio: "Data Mining<br>Operations Research"
+  email: wdbennette@gmail.com
+  facebook: wdbennette
+  stackoverflow: http://stackoverflow.com/users/628499/walter
+ 
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

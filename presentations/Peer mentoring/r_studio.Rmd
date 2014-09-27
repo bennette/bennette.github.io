@@ -1,0 +1,44 @@
+---
+title: R and RStudio
+author: Walt Bennette
+date: "September 25, 2014"
+output: ioslides_presentation
+---
+
+##R and RStudio
+
+- <font size="6"><b><span class="blue3">R is an open source statistical programming language </font></b></span> 
+       - Exploratory analysis  
+       - Model building  
+<br>  
+- <font size="6"><b><span class="blue3">RStudio is a convenient editor (think Eclipse) </font></b></span> 
+       - R Markdown  
+       - KnitR
+       - Shiny apps
+
+## R Markdown
+
+- <font size="6"><b><span class="blue3">Markdown is a simple formatting syntax </font></b></span>
+    - StackOverflow  
+    - Other online forums  
+<br>  
+- <font size="6"><b><span class="blue3">R Markdown helps create  </font></b></span>
+    - Slides  
+    - HTML   
+    - PDF  
+    - MS Word  
+    
+## KnitR  
+
+<font size="6"><b><span class="blue3"> We can include R code directly in R Markdown.  </font></b></span>
+
+<br>
+
+<font size="6"><b><span class="blue3"> Can accomodate major changes in data with minimal effort.</font></b></span>
+
+
+## Shiny apps  
+
+<font size="6"><b><span class="blue3"> Shiny allows you to easily create interactive analysis tools</font></b></span>
+
+

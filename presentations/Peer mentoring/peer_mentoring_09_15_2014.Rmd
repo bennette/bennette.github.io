@@ -1,0 +1,211 @@
+---
+title: "Peer mentoring"
+author: "Walt Bennette"
+date: "September 25, 2014"
+output: 
+    ioslides_presentation:
+        widescreen: true
+        transition: 0.0
+---
+
+## What are we doing?
+
+<div align="center">
+<img class="decoded" src="images/larry.gif" width=500 height=400>
+</div>
+
+
+## Options options options
+
+<div class="columns-2">
+
+<font size="6"><b><span class="blue3">Option A: </font></b></span>
+
+- Research and a little RStudio    
+- Discussion 
+    - CCS  
+    - Local knowledge   
+    - Brainstorm!
+
+<font size="6"><b><span class="blue3">Option B: </font></b></span> 
+
+- Discussion
+    - CCS  
+    - Local knowledge
+    - Brainstorm!
+</div>
+    
+# Discussion prompts  
+
+## CCS  
+
+<font size="6"><b><span class="blue3">Who has gone through this before?</font></b></span> 
+
+- AFRL MANUAL 36-104  
+- Categories  
+    - Problem solving  
+    - Communication  
+    - Teamwork and leadership  
+    - Technology management   
+    
+## Problem solving (DRII) {.flexbox .vcenter}
+
+```{r echo=FALSE, message=FALSE, fig.width=4.5, fig.height=4.5, warning=FALSE}
+library(tm)
+library(wordcloud)
+library(stringr)
+library(plyr)
+library(SnowballC)
+library(RSkittleBrewer)
+library(png)
+library(grid)
+library(wesanderson)
+
+
+#read text
+text<-readLines("/Users/Walter/Desktop/misc/Goals/descriptions/Problem_Solving_Factor_DRII.txt", warn=FALSE)
+
+#format text
+text<-removePunctuation(text, preserve_intra_word_dashes=TRUE)
+text<-removeWords(text, stopwords("english"))
+text<-Corpus(VectorSource(text))
+text<-tm_map(text, stripWhitespace)
+text<-tm_map(text, tolower)
+text<-tm_map(text, stemDocument)
+
+tdm<-TermDocumentMatrix(text)
+
+
+terms<-tdm$dimnames$Terms
+freq<-tdm$v
+
+wordcloud(terms, freq, max.words=25, min.freq=1, rot.per=0.35, use.r.layout=FALSE, colors=wes.palette(5,"Zissou"))
+
+```
+
+## Communication (DRII) {.flexbox .vcenter}
+
+```{r echo=FALSE, message=FALSE, fig.width=4.5, fig.height=4.5,warning=FALSE}
+library(tm)
+library(wordcloud)
+library(stringr)
+library(plyr)
+library(SnowballC)
+library(RSkittleBrewer)
+library(png)
+library(grid)
+library(wesanderson)
+
+
+#read text
+text<-readLines("/Users/Walter/Desktop/misc/Goals/descriptions/communication.txt", warn=FALSE)
+
+#format text
+text<-removePunctuation(text, preserve_intra_word_dashes=TRUE)
+text<-removeWords(text, stopwords("english"))
+text<-Corpus(VectorSource(text))
+text<-tm_map(text, stripWhitespace)
+text<-tm_map(text, tolower)
+text<-tm_map(text, stemDocument)
+
+tdm<-TermDocumentMatrix(text)
+
+
+terms<-tdm$dimnames$Terms
+freq<-tdm$v
+
+wordcloud(terms, freq, max.words=25, min.freq=1, rot.per=0.35, use.r.layout=FALSE, colors=wes.palette(5,"Darjeeling"))
+
+
+```
+
+
+## Teamwork and leadership (DRII) {.flexbox .vcenter}
+
+```{r echo=FALSE, message=FALSE, fig.width=4.5, fig.height=4.5,warning=FALSE}
+library(tm)
+library(wordcloud)
+library(stringr)
+library(plyr)
+library(SnowballC)
+library(RSkittleBrewer)
+library(png)
+library(grid)
+library(wesanderson)
+
+
+#read text
+text<-readLines("/Users/Walter/Desktop/misc/Goals/descriptions/teamwork.txt", warn=FALSE)
+
+#format text
+text<-removePunctuation(text, preserve_intra_word_dashes=TRUE)
+text<-removeWords(text, stopwords("english"))
+text<-Corpus(VectorSource(text))
+text<-tm_map(text, stripWhitespace)
+text<-tm_map(text, tolower)
+text<-tm_map(text, stemDocument)
+
+tdm<-TermDocumentMatrix(text)
+
+
+terms<-tdm$dimnames$Terms
+freq<-tdm$v
+
+wordcloud(terms, freq, scale=c(4,1.5) ,max.words=25, min.freq=1, rot.per=0.35, use.r.layout=FALSE, colors=wes.palette(4,"Moonrise2"))
+
+```
+
+## Technology management (DRII) {.flexbox .vcenter}
+
+```{r echo=FALSE, message=FALSE, fig.width=4.5, fig.height=4.5,warning=FALSE}
+library(tm)
+library(wordcloud)
+library(stringr)
+library(plyr)
+library(SnowballC)
+library(RSkittleBrewer)
+library(png)
+library(grid)
+library(wesanderson)
+
+
+#read text
+text<-readLines("/Users/Walter/Desktop/misc/Goals/descriptions/technology.txt", warn=FALSE)
+
+#format text
+text<-removePunctuation(text, preserve_intra_word_dashes=TRUE)
+text<-removeWords(text, stopwords("english"))
+text<-Corpus(VectorSource(text))
+text<-tm_map(text, stripWhitespace)
+text<-tm_map(text, tolower)
+text<-tm_map(text, stemDocument)
+
+tdm<-TermDocumentMatrix(text)
+
+
+terms<-tdm$dimnames$Terms
+freq<-tdm$v
+
+wordcloud(terms, freq, scale=c(4,1.5) ,max.words=25, min.freq=1, rot.per=0.35, use.r.layout=FALSE, colors=wes.palette(4,"Royal1"))
+
+```
+
+## Local knowledge
+
+
+
+## Brainstorm  
+
+
+<div align="center">
+<img class="decoded" src="images/quizboy.gif" width=700 height=400>
+</div>
+
+## Brainstorm  
+
+- Tutorials?  
+- Presentation prep?  
+
+...
+
+
