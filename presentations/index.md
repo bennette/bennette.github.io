@@ -11,4 +11,3 @@ image:
 * [Dissertation](/presentations/Dissertation)
 * [Research](/presentations/Research)
 * [Teaching](/presentations/Teaching)
-* [Introduction](/presentations/Introduction)

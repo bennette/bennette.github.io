@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data Mining Group
+title: Research
 tags: [presentations, cv]
 
 ---
