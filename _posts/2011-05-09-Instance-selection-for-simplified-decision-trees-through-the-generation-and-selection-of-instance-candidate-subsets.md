@@ -22,4 +22,4 @@ to generate a high quality solution space for finding simplified decision trees.
 
 
 
-* **[Click here for the full article in PDF!](/articles/Instance selection for simplified decision trees through the geneneration and selection of instance candidate subsets.pdf)**
+* **[Click here for the full article in PDF!](http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=3100&context=etd)**
