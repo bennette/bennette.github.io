@@ -58,7 +58,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap1.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap1.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?
@@ -73,7 +73,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap2.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap2.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?
@@ -88,7 +88,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap3.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap3.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?
@@ -103,7 +103,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap4.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap4.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?  
@@ -118,7 +118,7 @@ transition: none
 Classes may have outliers 
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers1.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/outliers1.png" width=700 height=400>
 </div>
 
 Should these outliers be accommodated?  
@@ -133,7 +133,7 @@ transition: none
 Classes may have outliers 
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers2.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/outliers2.png" width=700 height=400>
 </div>
 
 Should these outliers be accommodated?  
@@ -148,7 +148,7 @@ transition: none
 Minority class
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/minority1.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/minority1.png" width=700 height=400>
 </div>
 
 Does capturing the minority class introduce unnecessary structure?  
@@ -163,7 +163,7 @@ transition: none
 Minority class
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/minority2.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/minority2.png" width=700 height=400>
 </div>
 
 Does capturing the minority class introduce unnecessary structure?
@@ -211,7 +211,7 @@ Instance selection
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain1.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain1.png" width=900 height=500>
 </div>
 
 <small><small><small><small>
@@ -223,7 +223,7 @@ Instance selection
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain2.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain2.png" width=900 height=500>
 </div>  
 
 <small><small><small><small>
@@ -235,7 +235,7 @@ Instance selection
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain3.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain3.png" width=900 height=500>
 </div>
 
 <small><small><small><small>
@@ -246,7 +246,7 @@ Instance selection
 =============================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=800 height=450>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain4.png" width=800 height=450>
 </div>
 
 <small><small><small><small>
