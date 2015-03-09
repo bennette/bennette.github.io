@@ -3,6 +3,9 @@ Integer programming for instance selection in supervised learning
 author: Walter Bennette
 date: 02-28-2014
 
+
+
+
 Outline
 =================
 1. Classification   
@@ -38,14 +41,14 @@ What is classification?
 ![alt text][id10]  
 Target used data mining to determine when customers became pregnant.
 
-[id10]:http://bennette.github.io/presentations/Data_Mining_Group/Images/target.png "target"
+[id10]:http://bennette.github.io/presentations/Research/Images/target.png "target"
 
 
 What is classification?
 =======================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/training_data.png" width=1100 height=600>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/training_data.png" width=1100 height=600>
 </div>
 
 What is classification?
@@ -56,28 +59,28 @@ A ***classifier*** is a scheme built from training data to classify unlabeled da
 The ***decision tree*** classifier builds a model that tries to split the data into homogeneous groups.
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/decision_tree.png" width=700 height=300>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/decision_tree.png" width=700 height=300>
 </div>
 
 What is classification?
 =======================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classification_overview.png" width=1100 height=600>
-</div>
-
-What is classification?
-=======================
-transition: none
-<div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classify_1.png" width=700 height=600>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/classification_overview.png" width=1100 height=600>
 </div>
 
 What is classification?
 =======================
 transition: none
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/classify_2.png" width=700 height=600>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/classify_1.png" width=700 height=600>
+</div>
+
+What is classification?
+=======================
+transition: none
+<div align="center">
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/classify_2.png" width=700 height=600>
 </div>
 
 What is classification?
@@ -86,7 +89,7 @@ What is classification?
 Test accuracy is found by making predictions on previously unseen data.
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/test_data.png" width=900 height=300>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/test_data.png" width=900 height=300>
 </div>
 
 We say the decision tree has ***80% test accuracy*** because four of the five predictions are correct.
@@ -121,7 +124,7 @@ Questions????
 ================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused2.gif" width=700 height=600>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/confused2.gif" width=700 height=600>
 </div>
 
 Outline
@@ -151,7 +154,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap1.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap1.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?
@@ -162,7 +165,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap2.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap2.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?
@@ -174,7 +177,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap3.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap3.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?
@@ -185,7 +188,7 @@ transition: none
 Classes may overlap  
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overlap4.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overlap4.png" width=700 height=400>
 </div>
 
 Where should these classes be separated?
@@ -196,7 +199,7 @@ transition: none
 Classes may have outliers 
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers1.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/outliers1.png" width=700 height=400>
 </div>
 
 Should these outliers be accommodated?
@@ -207,7 +210,7 @@ transition: none
 Classes may have outliers 
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/outliers2.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/outliers2.png" width=700 height=400>
 </div>
 
 Should these outliers be accommodated?
@@ -218,7 +221,7 @@ transition: none
 Minority class
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/minority1.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/minority1.png" width=700 height=400>
 </div>
 
 Does capturing the minority class introduce unnecessary structure?
@@ -229,7 +232,7 @@ transition: none
 Minority class
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/minority2.png" width=700 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/minority2.png" width=700 height=400>
 </div>
 
 Does capturing the minority class introduce unnecessary structure?
@@ -260,7 +263,7 @@ Explanation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain1.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain1.png" width=900 height=500>
 </div>
 
 Explanation
@@ -268,7 +271,7 @@ Explanation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain2.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain2.png" width=900 height=500>
 </div>
 
 Explanation
@@ -276,14 +279,14 @@ Explanation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain3.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain3.png" width=900 height=500>
 </div>
 
 Explanation
 ===============
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/explain4.png" width=800 height=450>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/explain4.png" width=800 height=450>
 </div>
 
 Explanation
@@ -300,7 +303,7 @@ Good?
 ================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/confused3.gif" width=700 height=501>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/confused3.gif" width=700 height=501>
 </div>
 
 
@@ -339,7 +342,7 @@ How it feels to find the gap in literature
 ==================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/party.gif" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/party.gif" width=900 height=500>
 </div>
 
 Outline
@@ -467,7 +470,7 @@ Enter COLUMN GENERATION!!
 ========================
 type: alert
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/enter3.gif" width=700 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/enter3.gif" width=700 height=500>
 </div>
 
 Outline
@@ -500,7 +503,7 @@ Column generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cg1.png" width=900 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/cg1.png" width=900 height=400>
 </div>
 
 Column generation
@@ -508,7 +511,7 @@ Column generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cg2.png" width=900 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/cg2.png" width=900 height=400>
 </div>
 
 Column generation: Type I
@@ -516,7 +519,7 @@ Column generation: Type I
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_1.png" width=1000 height=609>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type1_1.png" width=1000 height=609>
 </div>
 
 Column generation: Type I
@@ -524,7 +527,7 @@ Column generation: Type I
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_2.png" width=1000 height=609>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type1_2.png" width=1000 height=609>
 </div>
 
 Column generation: Type I
@@ -532,7 +535,7 @@ Column generation: Type I
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_3.png" width=1000 height=609>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type1_3.png" width=1000 height=609>
 </div>
 
 Column generation: Type I
@@ -540,7 +543,7 @@ Column generation: Type I
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type1_4.png" width=1000 height=609>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type1_4.png" width=1000 height=609>
 </div>
 
 Column generation: Type II
@@ -568,7 +571,7 @@ Column generation: Type II
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_1.png" width=1000 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type2_1.png" width=1000 height=400>
 </div>
 
 Column generation: Type II
@@ -576,7 +579,7 @@ Column generation: Type II
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_2.png" width=1000 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type2_2.png" width=1000 height=400>
 </div>
 
 Column generation: Type II
@@ -584,7 +587,7 @@ Column generation: Type II
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_3.png" width=1000 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type2_3.png" width=1000 height=400>
 </div>
 
 Column generation: Type II
@@ -592,7 +595,7 @@ Column generation: Type II
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_4.png" width=1000 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type2_4.png" width=1000 height=400>
 </div>
 
 Column generation: Type II
@@ -600,7 +603,7 @@ Column generation: Type II
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/type2_5.png" width=1000 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/type2_5.png" width=1000 height=400>
 </div>
 
 Column generation: Type II
@@ -619,7 +622,7 @@ How's everyone doing?
 ====================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/mind1.gif" width=600 height=600>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/mind1.gif" width=600 height=600>
 </div>
 
 Implementing Column Generation
@@ -645,7 +648,7 @@ Implementing Column Generation
 ==============================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_1.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/cgi_1.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -653,7 +656,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_2.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/cgi_2.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -661,7 +664,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/cgi_3.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/cgi_3.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -669,7 +672,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop1.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop1.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -677,7 +680,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop2.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop2.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -685,7 +688,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop3.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop3.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -693,7 +696,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop4.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop4.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -701,7 +704,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop5.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop5.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -709,7 +712,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop6.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop6.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -717,7 +720,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop7.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop7.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -725,7 +728,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/pop8.png" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/pop8.png" width=900 height=500>
 </div>
 
 Implementing Column Generation
@@ -733,7 +736,7 @@ Implementing Column Generation
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/overall.png" width=900 height=600>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/overall.png" width=900 height=600>
 </div>
 
 Whew! Technical details are done.
@@ -741,7 +744,7 @@ Whew! Technical details are done.
 transition: none
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/whew.gif" width=900 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/whew.gif" width=900 height=500>
 </div>
 
 Outline
@@ -772,7 +775,7 @@ Interesting Results
 ===================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/Data_Mining_Group/Images/interesting.png" width=900 height=450>
+<img class="decoded" src="http://bennette.github.io/presentations/Research/Images/interesting.png" width=900 height=450>
 </div>
 
 Interesting Results
