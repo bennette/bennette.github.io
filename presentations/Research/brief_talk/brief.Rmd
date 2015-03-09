@@ -17,7 +17,22 @@ output:
 3. Results  
 4. Future work  
 
-## Instance selection for model-based classifiers
+## Motivation 
+
+A model-based classifier is an abstraction of data used to make predictions
+
+- Retail
+- Healthcare
+- Finance
+
+Better classifiers are beneficial
+
+- Make fewer missclassifications
+- Gain useful knowledge when analyzing the classifier
+
+
+
+## Motivation
 <div class="centered">
 <div class="columns-2">
 ```{r echo=FALSE, message=FALSE, fig.width=2, fig.height=3}
@@ -38,7 +53,7 @@ img <- readPNG("/Users/Walter/Desktop/New Rpres/Images/soldier.png")
 <br>
 <font size="6"><b><div class="blue3">We can build a model to distinguish between these</div></b> </font>  
 </div>
-## Instance selection for model-based classifiers
+## Motivation 
 <div class="centered">
 ```{r echo=FALSE, message=FALSE, fig.width=8.5, fig.height=5}
 library(png)
