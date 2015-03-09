@@ -16,7 +16,7 @@ Problem Statement
 =========================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/IE541/images/logo.gif" width=300 height=400>
+<img class="decoded" src="http://bennette.github.io/presentations/Teaching/IE541/images/logo.gif" width=300 height=400>
 </div>
 
 The Army Reserve can be thought of as a strategic reserve for the Army.
@@ -105,7 +105,7 @@ Products lose value after time:
 - How many old soldiers do you know?   
 
  <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/IE541/images/old.jpeg" width=225 height=300>
+<img class="decoded" src="http://bennette.github.io/presentations/Teaching/IE541/images/old.jpeg" width=225 height=300>
 </div>
 
 
@@ -130,7 +130,7 @@ Only one opportunity to place an order:
 - This is a simplifying assumption  
 - How many would sign up during war?
  <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/IE541/images/buster.gif" width=500 height=300>
+<img class="decoded" src="http://bennette.github.io/presentations/Teaching/IE541/images/buster.gif" width=500 height=300>
 </div>
 
 Model
@@ -143,7 +143,7 @@ Distribution of demand:
 <br>
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/IE541/images/distribution.png" width=500 height=300>
+<img class="decoded" src="http://bennette.github.io/presentations/Teaching/IE541/images/distribution.png" width=500 height=300>
 </div>
 
 Model
@@ -295,7 +295,7 @@ Questions?
 ==============================
 
 <div align="center">
-<img class="decoded" src="http://bennette.github.io/presentations/IE541/images/icecream.gif" width=800 height=500>
+<img class="decoded" src="http://bennette.github.io/presentations/Teaching/IE541/images/icecream.gif" width=800 height=500>
 </div>
 
 Questions?  

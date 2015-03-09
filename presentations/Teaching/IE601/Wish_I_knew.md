@@ -43,7 +43,7 @@ Lori Bushore
 <br>
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
 
 - this
 - that
@@ -56,7 +56,7 @@ Donna Cerka
 <br>
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
 
 - this
 - that
@@ -69,7 +69,7 @@ Krista Briley
 <br>
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
 
 - this
 - that
@@ -82,7 +82,7 @@ Jeff Eichorn
 <br>
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
 
 - this
 - that
@@ -95,7 +95,7 @@ Mike Renze
 <br>
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
 
 - this
 - that
@@ -180,7 +180,7 @@ Computing Resources
 
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
 
 It looks like this, and you have important files on your computer from school
 

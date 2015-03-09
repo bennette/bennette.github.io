@@ -29,7 +29,7 @@ incremental: true
 
   ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/sales-1-300x199.jpg "Initial Solution"
 
 
 
@@ -130,7 +130,7 @@ Example
 
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/used-car-salesman-seo.jpg "Initial Solution" 
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/used-car-salesman-seo.jpg "Initial Solution" 
 
 Example: Data
 ========================================================
@@ -417,7 +417,7 @@ Thanks
 
 ![alt text][id10]
 
-[id10]:http://bennette.github.io/presentations/IE312/IE312_applications-figure/Sleazy_Used_Car_Salesman_Marketing_Copywriting_Guaranteed.jpg "Initial Solution" 
+[id10]:http://bennette.github.io/presentations/Teaching/IE312/IE312_applications-figure/Sleazy_Used_Car_Salesman_Marketing_Copywriting_Guaranteed.jpg "Initial Solution" 
 
 LINGO Model
 ========================================================
