@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">small data&#58;<br>big benefit</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-09-27T09:16:41-04:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://bennette.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://bennette.github.io" />
+<updated>2016-08-31T07:13:34-04:00</updated>
+<id>http://bennette.github.io/</id>
 <author>
   <name>Walter Bennette</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://bennette.github.io/</uri>
   <email>wdbennette@gmail.com</email>
 </author>
 
@@ -16,26 +16,26 @@
   
 
 <entry>
-  <title type="html"><![CDATA[Model based classifier improvement through the generation and selection of instance candidate subsets]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/Model-based-classifier-improvement-through-the-generation-and-selection-of-instance-candidate-subsets/" />
-  <id>http://localhost:4000/Model-based-classifier-improvement-through-the-generation-and-selection-of-instance-candidate-subsets</id>
-  <published>2012-08-10T00:00:00-04:00</published>
-  <updated>2012-08-10T00:00:00-04:00</updated>
+  <title type="html"><![CDATA[Instance selection for model-based classifiers]]></title>
+  <link rel="alternate" type="text/html" href="http://bennette.github.io/Instance%20selection%20for%20model-based%20classifiers/" />
+  <id>http://bennette.github.io/Instance selection for model-based classifiers</id>
+  <published>2014-05-09T00:00:00-04:00</published>
+  <updated>2014-05-09T00:00:00-04:00</updated>
   <author>
     <name>Walter Bennette</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://bennette.github.io</uri>
     <email>wdbennette@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;By: Walter Bennette, Dr. Sigurdur Olafsson&lt;/p&gt;
 
 &lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
-&lt;p&gt;Data preprocessing to improve the quality of data utilized by classification algorithms is an important step in knowledge discovery that can be performed in part by instance selection algorithms.  In this paper, concepts from column generation and the set covering problem are used to construct high quality subsets of training instances to be used as decision variables in such instance selection procedures.  A greedy and Nested Partitions selection procedure are used with the constructed decision variables and show that improvements of classifier accuracy are possible for a variety of datasets using decision tree, naïve Bayes, and logistic regression classifiers.&lt;/p&gt;
+&lt;p&gt;Aspects of a classifier’s training dataset can often make building a helpful and high accuracy classifier difficult. Instance selection addresses some of the issues in a dataset by selecting a subset of the data in such a way that learning from the reduced dataset leads to a better classifier. This work introduces an integer programming formulation of instance selection that relies on column generation techniques to obtain a good solution to the problem. Experimental results show that instance selection improves the usefulness of some classifiers by optimizing the training data so that that the training dataset has easier to learn boundaries between class values. Also included in this paper are two case studies from the Surveillance, Epidemiology, and End Results (SEER) database that further confirm the benefit of instance selection. Overall, results indicate that performing instance selection for a classifier is a competitive classification approach. However, it should be noted that instance selection might overfit classifiers that have already achieved a good fit to the dataset.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/articles/Model based classifier improvement through the generation and selection of instance candidate subsets.pdf&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=4790&amp;amp;context=etd&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/Model-based-classifier-improvement-through-the-generation-and-selection-of-instance-candidate-subsets/&quot;&gt;Model based classifier improvement through the generation and selection of instance candidate subsets&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://localhost:4000&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on August 10, 2012.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://bennette.github.io/Instance%20selection%20for%20model-based%20classifiers/&quot;&gt;Instance selection for model-based classifiers&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://bennette.github.io&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on May 09, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -43,13 +43,13 @@
 
 <entry>
   <title type="html"><![CDATA[Instance selection for simplified decision trees through the geneneration and selection of instance candidate subsets]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/Instance-selection-for-simplified-decision-trees-through-the-generation-and-selection-of-instance-candidate-subsets/" />
-  <id>http://localhost:4000/Instance-selection-for-simplified-decision-trees-through-the-generation-and-selection-of-instance-candidate-subsets</id>
+  <link rel="alternate" type="text/html" href="http://bennette.github.io/Instance-selection-for-simplified-decision-trees-through-the-generation-and-selection-of-instance-candidate-subsets/" />
+  <id>http://bennette.github.io/Instance-selection-for-simplified-decision-trees-through-the-generation-and-selection-of-instance-candidate-subsets</id>
   <published>2011-05-09T00:00:00-04:00</published>
   <updated>2011-05-09T00:00:00-04:00</updated>
   <author>
     <name>Walter Bennette</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://bennette.github.io</uri>
     <email>wdbennette@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;By: Walter Bennette, Dr. Sigurdur Olafsson&lt;/p&gt;
@@ -68,10 +68,10 @@ cases we are indeed able to identify important group of instances, and subsequen
 to generate a high quality solution space for finding simplified decision trees. &lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/articles/Instance selection for simplified decision trees through the geneneration and selection of instance candidate subsets.pdf&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=3100&amp;amp;context=etd&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/Instance-selection-for-simplified-decision-trees-through-the-generation-and-selection-of-instance-candidate-subsets/&quot;&gt;Instance selection for simplified decision trees through the geneneration and selection of instance candidate subsets&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://localhost:4000&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on May 09, 2011.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://bennette.github.io/Instance-selection-for-simplified-decision-trees-through-the-generation-and-selection-of-instance-candidate-subsets/&quot;&gt;Instance selection for simplified decision trees through the geneneration and selection of instance candidate subsets&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://bennette.github.io&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on May 09, 2011.&lt;/p&gt;</content>
 </entry>
 
 </feed>

@@ -1,0 +1,1108 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+library(ggplot2)
+library(maps)
+library(mapproj)
+library(dplyr)
+library(RWeka)
+library(readr)
+library(reshape2)
+library(knitr)
+```
+
+## Instance selection  
+
+<font color="blue">**What**</font>  
+
+- A pre-processing technique for instance-based classification
+- Only "necessary" instances are maintained   
+
+<font color="blue">**Why**</font>  
+
+- Memory
+- Prediction time
+
+<font color="blue">**How**</font> 
+
+- Filters  
+- Wrappers
+    - An evolutionary algorithm with an arbitrary stopping criterion  
+
+# Instance-based classification
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+dat <- data.frame(x = c( 0.7, 0.6, 0.8, 0.5, 0.2, 0.5),
+                  y = c( 0.7, 0.9, 0.5,  0.5, 0.7, 0.2),
+                  class = c("two", "two", "two", "one", "one", "one"),
+                  type = c( "train", "train", "train", "train", "train", "train"))
+
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("Given this data...") +
+       scale_colour_manual(guide = FALSE, values = c("#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+
+
+dat <- data.frame(x = c(0.57, 0.7, 0.6, 0.8, 0.5, 0.2, 0.5),
+                  y = c(0.57, 0.7, 0.9, 0.5,  0.5, 0.7, 0.2),
+                  class = c("none","two", "two", "two", "one", "one", "one"),
+                  type = c("test", "train", "train", "train", "train", "train", "train"))
+
+
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("What would we label a new point?") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+
+
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       geom_segment(data = dat, aes(x = dat$x[2], y = dat$y[2], xend = dat$x[1], yend = dat$y[1]), colour = "#000000", lty = 2 ) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("It should be the same as its closest neighbors.") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       geom_segment(data = dat, aes(x = dat$x[2], y = dat$y[2], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+         geom_segment(data = dat, aes(x = dat$x[3], y = dat$y[3], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("It should be the same as its closest neighbors.") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       geom_segment(data = dat, aes(x = dat$x[2], y = dat$y[2], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+         geom_segment(data = dat, aes(x = dat$x[3], y = dat$y[3], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+           geom_segment(data = dat, aes(x = dat$x[4], y = dat$y[4], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("It should be the same as its closest neighbors.") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       geom_segment(data = dat, aes(x = dat$x[2], y = dat$y[2], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+         geom_segment(data = dat, aes(x = dat$x[3], y = dat$y[3], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+           geom_segment(data = dat, aes(x = dat$x[4], y = dat$y[4], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+             geom_segment(data = dat, aes(x = dat$x[5], y = dat$y[5], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("It should be the same as its closest neighbors.") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       geom_segment(data = dat, aes(x = dat$x[2], y = dat$y[2], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+         geom_segment(data = dat, aes(x = dat$x[3], y = dat$y[3], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+           geom_segment(data = dat, aes(x = dat$x[4], y = dat$y[4], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+             geom_segment(data = dat, aes(x = dat$x[5], y = dat$y[5], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+               geom_segment(data = dat, aes(x = dat$x[6], y = dat$y[6], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("It should be the same as its closest neighbors.") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+ggplot() + 
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       geom_segment(data = dat, aes(x = dat$x[2], y = dat$y[2], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+         geom_segment(data = dat, aes(x = dat$x[3], y = dat$y[3], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+           geom_segment(data = dat, aes(x = dat$x[4], y = dat$y[4], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+             geom_segment(data = dat, aes(x = dat$x[5], y = dat$y[5], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+               geom_segment(data = dat, aes(x = dat$x[6], y = dat$y[6], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+                 geom_segment(data = dat, aes(x = dat$x[7], y = dat$y[7], xend = dat$x[1], yend = dat$y[1]), 
+                    colour = "#000000", lty = 2 ) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("It should be the same as its closest neighbors.") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+
+circleFun <- function(center = c(0,0),diameter = 1, npoints = 100){
+    r = diameter / 2
+    tt <- seq(0,2*pi,length.out = npoints)
+    xx <- center[1] + r * cos(tt)
+    yy <- center[2] + r * sin(tt)
+    return(data.frame(x = xx, y = yy))
+}
+
+dat <- data.frame(x = c(0.57, 0.7, 0.6, 0.8, 0.5, 0.2, 0.5),
+                  y = c(0.57, 0.7, 0.9, 0.5,  0.5, 0.7, 0.2),
+                  class = c("none","two", "two", "two", "one", "one", "one"),
+                  type = c("test", "train", "train", "train", "train", "train", "train"))
+
+cir <- circleFun(center = c(0.57, 0.57), diameter = 0.3, npoints = 100)
+
+ggplot(cir, aes(x = x, y = y)) + 
+       geom_path(linetype = 'dashed') +
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("1 - NN") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+
+## Instance-based classification
+
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+
+circleFun <- function(center = c(0,0),diameter = 1, npoints = 100){
+    r = diameter / 2
+    tt <- seq(0,2*pi,length.out = npoints)
+    xx <- center[1] + r * cos(tt)
+    yy <- center[2] + r * sin(tt)
+    return(data.frame(x = xx, y = yy))
+}
+
+dat <- data.frame(x = c(0.57, 0.7, 0.6, 0.8, 0.5, 0.2, 0.5),
+                  y = c(0.57, 0.7, 0.9, 0.5,  0.5, 0.7, 0.2),
+                  class = c("none","two", "two", "two", "one", "one", "one"),
+                  type = c("test", "train", "train", "train", "train", "train", "train"))
+
+cir <- circleFun(center = c(0.57, 0.57), diameter = 0.55, npoints = 100)
+
+ggplot(cir, aes(x = x, y = y)) + 
+       geom_path(linetype = 'dashed') +
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = 5) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("3 - NN") +
+       scale_colour_manual(guide = FALSE, values = c("#000000","#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+- [Load forecasting assistant for power company](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=14540&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel1%2F59%2F569%2F00014540.pdf%3Farnumber%3D14540)  
+    - Hourly load forecast 
+    - Utilize weather and seasonal variables  
+    - Growing number of data sources and observations  
+    - Increased control  
+
+## Instance-based classification
+
+What if there is a large amount of data?  
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+
+datRed <- data.frame(x = runif(n = 1000, min = 0, max = 0.5 ),
+                     y = runif(n = 1000, min = 0, max = 1.0), 
+                     class = "Black",
+                     type = "train")
+datBlue <- data.frame(x = runif(n = 1000, min = 0.5, max = 1.0 ),
+                     y = runif(n = 1000, min = 0, max = 1.0), 
+                     class = "Red",
+                     type = "train")
+dat <- rbind(datRed, datBlue)
+
+#write.arff(dat[,c(1:3)], "/Users/Walter/Documents/Winter2016/bigDataWorkshop/presentation/data/all.arff")
+
+
+ggplot() + 
+       geom_path(linetype = 'dashed') +
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = .5) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("") +
+       scale_colour_manual(guide = FALSE, values = c("#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+What if there is a huge amount of data?  
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+
+datRed <- data.frame(x = runif(n = 10000, min = 0, max = 0.5 ),
+                     y = runif(n = 10000, min = 0, max = 1.0), 
+                     class = "Black",
+                     type = "train")
+datBlue <- data.frame(x = runif(n = 10000, min = 0.5, max = 1.0 ),
+                     y = runif(n = 10000, min = 0, max = 1.0), 
+                     class = "Red",
+                     type = "train")
+dat <- rbind(datRed, datBlue)
+
+##write.arff(dat[,c(1:3)], "/Users/Walter/Documents/Winter2016/bigDataWorkshop/presentation/data/all.arff")
+
+ggplot() + 
+       geom_path(linetype = 'dashed') +
+       geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = .5) +
+       theme_classic() +
+       xlab("") +
+       ylab("") +
+       ggtitle("") +
+       scale_colour_manual(guide = FALSE, values = c("#000000", "red")) +
+       scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+       scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+       scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+```
+</div>
+
+## Instance-based classification
+
+What if there is a serious amount of data?
+<div align = "center">
+```{r, fig.width=4.5, fig.height=4.5}
+
+datRed <- data.frame(x = runif(n = 100000, min = 0, max = 0.5 ),
+                     y = runif(n = 100000, min = 0, max = 1.0), 
+                     class = "Black",
+                     type = "train")
+datBlue <- data.frame(x = runif(n = 100000, min = 0.5, max = 1.0 ),
+                     y = runif(n = 100000, min = 0, max = 1.0), 
+                     class = "Red",
+                     type = "train")
+dat <- rbind(datRed, datBlue)
+
+pBig <- ggplot() + 
+           geom_path(linetype = 'dashed') +
+           geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = .5) +
+           theme_classic() +
+           xlab("") +
+           ylab("") +
+           ggtitle("") +
+           scale_colour_manual(guide = FALSE, values = c("#000000", "red")) +
+           scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+           scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+           scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+pBig
+```
+</div>
+
+# Instance selection 
+
+## Instance selection 
+
+<font color="blue">**Retain only the instances "necessary" to achieve adequate classification rates**</font>  
+
+- Reduce storage requirements  
+- Reduce prediction time  
+
+## Edited Nearest Neighbors (ENN)
+Formulation:  
+
+- An instance is removed from the training data if its does not agree with the majority of its $k$ nearest neighbors  
+
+Effect:  
+
+- Makes decision boundaries smoother
+- Doesn't remove much data 
+
+## Edited Neares Neighbors (ENN)  
+
+<div align = "center">
+```{r, fig.width=9, fig.height=4.5}
+multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+  library(grid)
+
+  # Make a list from the ... arguments and plotlist
+  plots <- c(list(...), plotlist)
+
+  numPlots = length(plots)
+
+  # If layout is NULL, then use 'cols' to determine layout
+  if (is.null(layout)) {
+    # Make the panel
+    # ncol: Number of columns of plots
+    # nrow: Number of rows needed, calculated from # of cols
+    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
+                    ncol = cols, nrow = ceiling(numPlots/cols))
+  }
+
+ if (numPlots==1) {
+    print(plots[[1]])
+
+  } else {
+    # Set up the page
+    grid.newpage()
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
+
+    # Make each plot, in the correct location
+    for (i in 1:numPlots) {
+      # Get the i,j matrix positions of the regions that contain this subplot
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
+
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
+                                      layout.pos.col = matchidx$col))
+    }
+  }
+}
+
+pBig <- ggplot() + 
+           geom_path(linetype = 'dashed') +
+           geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = .5) +
+           theme_classic() +
+           xlab("") +
+           ylab("") +
+           ggtitle("Original") +
+           scale_colour_manual(guide = FALSE, values = c("#000000", "red")) +
+           scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+           scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+           scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+datRed <- data.frame(x = runif(n = 100000, min = 0, max = 0.495 ),
+                     y = runif(n = 100000, min = 0, max = 1.0), 
+                     class = "Black",
+                     type = "train")
+datBlue <- data.frame(x = runif(n = 100000, min = 0.505, max = 1.0 ),
+                     y = runif(n = 100000, min = 0, max = 1.0), 
+                     class = "Red",
+                     type = "train")
+dat <- rbind(datRed, datBlue)
+
+pENN <- ggplot() + 
+           geom_path(linetype = 'dashed') +
+           geom_point(data = dat, aes(x = x, y = y, colour = class, shape = type), size = .5) +
+           theme_classic() +
+           xlab("") +
+           ylab("") +
+           ggtitle("ENN") +
+           scale_colour_manual(guide = FALSE, values = c("#000000", "red")) +
+           scale_shape_manual(guide = FALSE, values = c(8, 16)) + 
+           scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+           scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+multiplot(pBig, pENN, cols =2)
+
+```
+</div>
+
+## DROP3  
+Formulation:  
+
+- Iterative procedure that compares accuracy of neighborhoods with and without members
+
+Effect:  
+
+- Removes much more data than ENN
+- Maintains acceptable accuracy
+
+## DROP3  
+
+<div align = "center">
+```{r, fig.width=9, fig.height=4.5}
+dat <- read.arff("/Users/Walter/Documents/Winter2016/bigDataWorkshop/presentation/data/DROP3.arff")
+
+pDROP <- ggplot() + 
+           geom_path(linetype = 'dashed') +
+           geom_point(data = dat, aes(x = x, y = y, colour = class), shape = 8, size = .5) +
+           theme_classic() +
+           xlab("") +
+           ylab("") +
+           ggtitle("DROP3") +
+           scale_colour_manual(guide = FALSE, values = c("#000000", "red")) +
+           scale_x_continuous(limits = c(0,1), labels = c(), breaks = c()) +
+           scale_y_continuous(limits = c(0,1), labels = c(), breaks = c()) 
+
+multiplot(pBig, pDROP, cols =2)
+
+```
+</div>
+
+# Evolutionary Instance Selection
+
+## Evolutionary Instance Selection
+- Search for best subset of training data  
+- $Fitness = \alpha *classAccuracy + (1-\alpha) * percReduction$
+- Each instance is a gene 
+    - One, keep instance  
+    - Zero, discard instance
+
+## Evolutionary Instance Selection  
+
+- @Cano2003, tested families of evolutionary algorithms  
+- Determined "cross generational elitist selection, heterogeneous recombination and cataclysmic mutation" (CHC) was most effective 
+- Widely adapted in instance selection literature  
+- Some of the best results for data reduction and classification accuracy [@Garcia2015]
+
+
+## CHC{.small}
+1. Create a parent population of size $N$ and set threshold to $\frac{|training \ data|}{4}$
+2. Generate a child population from parents  
+    - Select two previously unconsidered parents
+    - If Hamming distance is greater than threshold perform half uniform cross-over (HUX) to generate two children  
+3. Hold a competition to determine new parent population  
+    - If no children enter parent population reduce threshold by one 
+    - If threshold falls below zero perform cataclysmic re-population
+        - Reset threshold and discard all chromosomes except most fit
+        - Use mutation to generate $N-1$ new chromosomes
+4. Return to Step 2 until stopping criterion is met
+
+## Current CHC stopping critierion
+
+<br>
+<div align = "center">
+![](/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/smartStopping/presentation/Images/stoppingOld.png)
+</div>
+
+## Data driven CHC stopping critierion  
+
+- At a cataclysmic re-population, compare the best individual to the best individual from the last cataclysmic re-population  
+- If the improvement in fitness is less than or equal to some $G$, stop
+
+## Data driven example{.small}  
+<div align = "center">
+```{r, fig.height = 4.825}
+dat1 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/tuninExperimentsSmall.050/wisconsin.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+  data.frame() 
+  
+  dat1$Dataset <- "wisconsin"
+  
+  dat2 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/tuninExperimentsSmall.050/monk-2.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+    data.frame() 
+  
+  dat2$Dataset <- "monk-2"
+  
+  dat3 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/tuninExperimentsSmall.050/spectfheart.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+    data.frame() 
+  
+  dat3$Dataset <- "spectfheart"
+  
+  dat4 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/tuninExperimentsSmall.050/mammographic.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+    data.frame() 
+  
+  dat4$Dataset <- "mamographic"
+  
+  
+  
+  
+  dat <- rbind(dat1, dat2, dat3, dat4)
+  
+  
+  datObj <- dat %>% group_by(Dataset, Generation) %>%
+    summarize(ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction))
+  
+  
+  
+  
+  stopPoint1 <- dat %>% filter(stop1 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop1")
+  
+  stopPoint75 <- dat %>% filter(stop75 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop75")
+  
+  stopPoint50 <- dat %>% filter(stop50 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop50")
+  
+  stopPoint25 <- dat %>% filter(stop25 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop25")
+  
+  stopPoint0 <- dat %>% filter(stop0 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop0")
+  
+  stopPoint1000 <-  dat %>% filter(stop10000 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop10000")
+  
+  stopPoint <- rbind(stopPoint1, stopPoint75, stopPoint50, stopPoint25, stopPoint0, stopPoint1000)
+  
+  stopPoint$Stop <- factor(stopPoint$Stop, levels = c("Stop1", "Stop75", "Stop50", "Stop25", "Stop0", "Stop10000"),
+                           labels = c("G = 1", "G = 0.75", "G = 0.5", "G = 0.25", "G = 0.0", "10,000 Generations"))
+  
+  datObj2 <- datObj %>% mutate(Reduction = Reduction * 100) %>%
+    melt(id = c("Dataset", "Generation"))
+  
+  test <- datObj2 %>% group_by(Dataset) %>% 
+    filter(Generation < 10000)
+  
+  
+ggplot() + 
+    geom_line(data = test %>% filter(variable == "ObjectiveValue"), aes(x = Generation, y = value)) + 
+    geom_point(data = stopPoint, aes(x = Generation, y = ObjectiveValue, color = Stop), size = 2.5, show.legend = TRUE) +
+    theme_bw() +
+    ylab("Accuracy") +
+    ggtitle("Objective Value by Generation") + 
+    facet_grid(Dataset ~.) +
+    scale_color_manual(name = "Stopping Criteria", values = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")) 
+
+
+```
+</div>
+
+## Data driven example{.smal} 
+<div align = "center">
+```{r, fig.height = 3.125}
+  dat1 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/pageblocksNoFolds/page-blocks.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+  data.frame() 
+  
+  dat1$Dataset <- "Page-blocks"
+  
+  
+  
+  dat <- rbind(dat1)
+  
+  
+  
+  
+  datObj <- dat %>% group_by(Dataset, Generation) %>%
+    summarize(ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction))
+  
+  
+  
+  
+  stopPoint1 <- dat %>% filter(stop1 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop1")
+  
+  stopPoint75 <- dat %>% filter(stop75 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop75")
+  
+  stopPoint50 <- dat %>% filter(stop50 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop50")
+  
+  stopPoint25 <- dat %>% filter(stop25 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop25")
+  
+  stopPoint0 <- dat %>% filter(stop0 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop0")
+  
+  stopPoint1000 <-  dat %>% filter(stop10000 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop10000")
+  
+  stopPoint <- rbind(stopPoint1, stopPoint75, stopPoint50, stopPoint25, stopPoint0, stopPoint1000)
+  
+  
+  
+  stopPoint$Stop <- factor(stopPoint$Stop, levels = c("Stop1", "Stop75", "Stop50", "Stop25", "Stop0", "Stop10000"),
+                           labels = c("G = 1", "G = 0.75", "G = 0.5", "G = 0.25", "G = 0.0", "10,000 Generations"))
+  
+  datObj2 <- datObj %>% mutate(Reduction = Reduction * 100) %>%
+    melt(id = c("Dataset", "Generation"))
+  
+  test <- datObj2 %>% group_by(Dataset) %>% 
+    filter(Generation < stopPoint0$Generation[which(stopPoint0$Dataset == Dataset[1])])
+  
+
+  ggplot() + 
+    geom_line(data = test %>% filter(variable == "ObjectiveValue"), aes(x = Generation, y = value)) + 
+    geom_point(data = stopPoint, aes(x = Generation, y = ObjectiveValue, color = Stop), size = 2.5, show.legend = TRUE) +
+    theme_bw() +
+    ylab("Accuracy") +
+    ggtitle("Objective Value by Generation") + 
+    facet_grid(Dataset~.) +
+    scale_color_manual(name = "Stopping Criteria", values = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")) 
+```
+</div>
+- CHC has difficulty converging when there are many instances
+- Most recommend a stratified scaling approach  
+
+## Data driven example{.smal} 
+<div align = "center">
+```{r, fig.height = 4.825}
+  dat1 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/pageblocks5folds/fold1.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+  data.frame() 
+  
+  dat1$Dataset <- "Fold 1"
+  
+  dat2 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/pageblocks5folds/fold2.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+    data.frame() 
+  
+  dat2$Dataset <- "Fold 2"
+  
+  dat3 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/pageblocks5folds/fold3.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+    data.frame() 
+  
+  dat3$Dataset <- "Fold 3"
+  
+  dat4 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/pageblocks5folds/fold4.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+    data.frame() 
+  
+  dat4$Dataset <- "Fold 4"
+  
+  dat5 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/results_tuning/pageblocks5folds/fold5.arffTuningResults.csv",
+                   col_names = c("Iteration", "Generation", "ObjectiveValue", "TrainAccuracy", "Reduction", "Cataclysmic", "stop1", "stop75", "stop50", "stop25", "stop0", "stop10000"),
+                   col_types = "iidddccccccc",
+                   skip = 1) %>% 
+    data.frame() 
+  
+  dat5$Dataset <- "Fold 5"
+  
+  
+  
+  
+  dat <- rbind(dat1, dat2, dat3, dat4, dat5)
+  
+  
+  
+  
+  datObj <- dat %>% group_by(Dataset, Generation) %>%
+    summarize(ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction))
+  
+  
+  
+  
+  stopPoint1 <- dat %>% filter(stop1 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop1")
+  
+  stopPoint75 <- dat %>% filter(stop75 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop75")
+  
+  stopPoint50 <- dat %>% filter(stop50 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop50")
+  
+  stopPoint25 <- dat %>% filter(stop25 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop25")
+  
+  stopPoint0 <- dat %>% filter(stop0 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop0")
+  
+  stopPoint1000 <-  dat %>% filter(stop10000 == "true") %>%
+    group_by(Dataset) %>%
+    summarize(Generation = mean(Generation),
+              ObjectiveValue = mean(ObjectiveValue),
+              TrainAccuracy = mean(TrainAccuracy),
+              Reduction = mean(Reduction)) %>%
+    mutate(Stop = "Stop10000")
+  
+  stopPoint <- rbind(stopPoint1, stopPoint75, stopPoint50, stopPoint25, stopPoint0, stopPoint1000)
+  
+  
+  
+  stopPoint$Stop <- factor(stopPoint$Stop, levels = c("Stop1", "Stop75", "Stop50", "Stop25", "Stop0", "Stop10000"),
+                           labels = c("G = 1", "G = 0.75", "G = 0.5", "G = 0.25", "G = 0.0", "10,000 Generations"))
+  
+  datObj2 <- datObj %>% mutate(Reduction = Reduction * 100) %>%
+    melt(id = c("Dataset", "Generation"))
+  
+  
+  
+  
+  test <- datObj2 %>% group_by(Dataset) %>% 
+    filter(Generation < 10000)
+  
+ggplot() + 
+    geom_line(data = test %>% filter(variable == "ObjectiveValue"), aes(x = Generation, y = value )) + 
+    geom_point(data = stopPoint, aes(x = Generation, y = ObjectiveValue, color = Stop), size = 2.5, show.legend = TRUE) +
+    theme_bw() +
+    ylab("Accuracy") +
+    ggtitle("Pageblock Stratified\nObjective Value by Generation") + 
+    facet_grid(Dataset~.) +
+    scale_color_manual(name = "Stopping Criteria", values = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")) 
+```
+</div>
+
+## Experiment{.small}  
+
+Using 3-NN:  
+
+- Compare CHC_10K and CHC_0 (10k generations versus data driven for $G=0$)  
+- 10-fold cross validation applied three times 
+- Record accuracy, reduction, and computation time
+- 30 "small" datasets (100 - 1,000 instances)  
+- 21 "medium" datasets, using stratification (1,001 - 12,960 instances)  
+- Wilcoxin Signed Ranked test for differences in accuracy, reduction, and time
+
+## Results 
+
+```{r}
+results <- data.frame(Size = c("Small", "Small", "Medium", "Medium"),
+                      Method = c("CHC_10K", "CHC_0", "CHC_10K", "CHC_0"),
+                      Accuracy = c(77.3, 77.3, 75.4, 75.6), 
+                      Reduction = c(91.1, 90.6, 90.9, 90.8),
+                      Time = c(119, 64, 1631, 1415))
+kable(results, format = "markdown")
+```
+- No significant difference in accuracy  
+- Significant (but small) difference in reduction
+- Significant difference in time   
+
+## Unexpected results  
+
+```{r, fig.width=11}
+dat1 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/largeDatasetResults/April262016/April202016/TuningResultsLarge.csv",
+                 col_names = c("Dataset", "Fold", "Seed",  "TSSMethod", "NumberGenerations", "ObjectiveValue", "TrainAccuracy", "Reduction", "TestAccuracy", "Time", "Cores", "Size"),
+                 col_types = "ciiccdddddic",
+                 skip = 1) %>% 
+        data.frame() %>%
+        mutate(NumberGenerations = NumberGenerations %>% as.numeric())
+
+dat2 <- read_csv("/Users/Walter/Documents/Spring2016/smartEvolutionaryStopping/javaExperiments/largeDatasetResults/April262016/April182016/small/TuningResultsSmall.csv",
+                 col_names = c("Dataset", "Fold", "Seed",  "TSSMethod", "NumberGenerations", "ObjectiveValue", "TrainAccuracy", "Reduction", "TestAccuracy", "Time", "Cores", "Size"),
+                 col_types = "ciiccdddddic",
+                 skip = 1) %>% 
+  data.frame() %>%
+  mutate(NumberGenerations = NumberGenerations %>% as.numeric())
+
+
+
+
+
+dat <- rbind(dat1, dat2)
+rm(dat1, dat2)
+
+dat <- dat %>% group_by(Dataset, TSSMethod) %>%
+  summarize(NumberGenerationsMean = mean(NumberGenerations),
+            NumberGenerationsSD = sd(NumberGenerations),
+            ObjectiveValueMean = mean(ObjectiveValue),
+            ObjeciveValueSD = sd(ObjectiveValue),
+            TrainAccuracyMean = mean(TrainAccuracy),
+            TrainAccuracySD = sd(TrainAccuracy),
+            ReductionMean = mean(Reduction),
+            ReductionSD = sd(Reduction),
+            TestAccuracyMean = mean(TestAccuracy),
+            TestAccuraySD = sd(TestAccuracy),
+            TimeMean = mean(Time),
+            TimeSD = sd(Time),
+            CoresMean = mean(Cores),
+            CoresSD = sd(Cores)) %>%
+   filter(Dataset != "appendicitis.arff",
+          Dataset != "mammographic.arff",
+          Dataset != "monk-2.arff", 
+          Dataset != "spectfheart.arff", 
+          Dataset != "wisconsin.arff", 
+          Dataset != "page-blocks.arff")
+
+dat$Dataset <-factor(dat$Dataset, labels = c("Abalone", "Australian",
+                                             "Autos", "Balance", "Banana", 
+                                             "Bands", "Breast", "Bupa",
+                                             "Car", "Chess", "Cleveland",
+                                             "Contraceptive", "Crx", "Dermatology",
+                                             "Ecoli", "Flare-solar", "German",
+                                             "Glass", "Haberman", "Hayes",
+                                             "Heart", "Hepatitis", "Housevotes",
+                                             "Iris", "Led7digit", "Lymphography",
+                                             "Marketing",
+                                             "Newthyroid", "Nursery",
+                                             "Pendigits", "Phoneme", "Pima",
+                                             "Ring", "Saheart", "Satimage",
+                                             "Segment", "Sonar", "Spambase", "Splice",
+                                             "Tae", "Texture", "Thyroid",
+                                             "Tic-tac-toe", "Titanic", "Twonorm",
+                                             "Vehicle", "Vowel", "Wine",
+                                             "Yeast", "Zoo"))
+datPlot <- dat %>% select(Dataset, TSSMethod, TestAccuracyMean, ReductionMean, TimeMean, ObjectiveValueMean)  %>%
+  mutate(TimeMean = TimeMean/1000) %>%
+  melt()
+
+datPlot$TSSMethod <- factor(datPlot$TSSMethod, levels = c("Original", "TenThousand", "SmartStop", "DROP3"),
+                            labels = c("3-NN", "CHC_10K", "CHC_0", "DROP3"))
+datPlot <- datPlot %>% filter(TSSMethod != "DROP3") %>% droplevels()
+
+datPlot2 <- datPlot %>% filter(Dataset %in% c("Chess", "Splice")) %>% filter(TSSMethod != "3-NN") %>% droplevels()
+
+p1 <- ggplot(datPlot2 %>% filter(variable == "TestAccuracyMean"), aes(x = Dataset, y = value, color = TSSMethod)) +
+  geom_point(size = 2.5)  +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  scale_color_manual(name = "Method",
+                     values = c("#E69F00", "#56B4E9")) +
+  ylab("Predictive Accuracy (%)") +
+  ggtitle("Predictive Accuracy by Method")
+
+p2 <- ggplot(datPlot2 %>% filter(variable == "ReductionMean", TSSMethod != "3-NN") , aes(x = Dataset, y = value, color = TSSMethod)) +
+  geom_point(size = 2.5)  +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  scale_color_manual(name = "Method", 
+                     values = c("#E69F00", "#56B4E9"),
+                     guide = FALSE) +
+  ylab("Reduction (%)") +
+  ggtitle("Reduction by Method")
+
+p3 <- ggplot(datPlot2 %>% filter(variable == "TimeMean", TSSMethod != "3-NN") , aes(y = value, x = Dataset, color = TSSMethod)) +
+  geom_point(size = 2.5)  +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  scale_color_manual(name = "Method", 
+                     values = c("#E69F00", "#56B4E9"),
+                     guide = FALSE) +
+#  scale_y_log10(breaks = c(10, 100, 1000)) +
+  ylab("Time in seconds") +
+  ggtitle("Time by Method")
+
+multiplot(p3, p2, p1, cols = 3)
+
+```
+
+## Take away one
+
+- A set number of generations is not the correct way to terminate CHC  
+- CHC_0 is a criterion
+- Additional criterion can be created
+
+## A word on the competittion 
+
+```{r}
+results <- data.frame(Size = c("Small", "Small", "Small", "Medium", "Medium", "Medium"),
+                      Method = c("3-NN","DROP3", "CHC_0", "3-NN", "DROP3", "CHC_0"),
+                      Accuracy = c(78.6, 76.1, 77.3, 78.7, 73.7, 75.6), 
+                      Reduction = c(NA, 90.7, 90.6, NA, 92.8, 90.8),
+                      Time = c(NA, 1, 64, NA,  17, 1415))
+kable(results, format = "markdown")
+```
+- On average, DROP3 achieves greater reduction  
+- On average, CHC_0 achieves better accuracy
+- DROP3 is very fast
+
+## Take away two  
+
+- Practitioners need to keep their application in mind  
+- Use DROP3 when instance selection needs to be applied quickly  
+- Use CHC when accuracy is a priority 
+
+## Questions  
+
+Walter Bennette  
+walter.bennette.1@us.af.mil  
+wdbennette@gmail.com
+
+## References{.small}
