@@ -16,5 +16,6 @@ I am a recent Ph.D graduate from Iowa State University where I studied Industria
 - Running (1200.3 miles in 2013)
 - Shooting pool
 - Star Trek
-- Outdoors (hiking, skiing, fishing...)
+- Outdoors (hiking, skiing, fishing...)  
+- I added something
 
