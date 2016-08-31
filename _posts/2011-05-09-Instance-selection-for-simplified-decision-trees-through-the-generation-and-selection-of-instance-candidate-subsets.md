@@ -6,7 +6,7 @@ tags: [instance selection, decision tree]
 ---
 By: Walter Bennette, Dr. Sigurdur Olafsson
 
-###Abstract
+### Abstract  
 Decision trees are a useful tool to help in the extraction of information from 
 databases, but all too often this ability is clouded by the complexity of the tree structure 
 resulting from the decision tree algorithm. Methods such as tree pruning, attribute selection, 
@@ -22,4 +22,4 @@ to generate a high quality solution space for finding simplified decision trees.
 
 
 
-* **[Click here for the full article in PDF!](http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=3100&context=etd)**
+***[Click here for the full article in PDF!](http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=3100&context=etd)**
