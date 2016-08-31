@@ -20,6 +20,6 @@ cases we are indeed able to identify important group of instances, and subsequen
 to generate a high quality solution space for finding simplified decision trees. 
 
 
-
+<br>
 
 ***[Click here for the full article in PDF!](http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=3100&context=etd)**
