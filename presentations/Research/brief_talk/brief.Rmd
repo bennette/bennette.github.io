@@ -77,7 +77,7 @@ img <- readPNG("/Users/Walter/Desktop/New Rpres/Images/classification_overview.p
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 library(xkcd)
-data<-read.csv("/Users/Walter/Desktop/New Rpres/overlap.csv")
+data<-read.csv("/Users/Walter/Dropbox/INFORMS 2/overlap.csv")
 
 cbPalette <- c("#000000", "#FF0000", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7","#999999")
 xrange <- range(data$X)

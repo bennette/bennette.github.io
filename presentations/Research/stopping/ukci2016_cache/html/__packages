@@ -1,0 +1,9 @@
+base
+ggplot2
+dplyr
+RWeka
+readr
+reshape2
+knitr
+maps
+mapproj
