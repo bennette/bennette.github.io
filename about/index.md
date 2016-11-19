@@ -8,13 +8,13 @@ image:
   feature: sault2.jpg
 ---
 
-### Academic  
-I am a recent Ph.D graduate from Iowa State University where I studied Industrial Engineering.  My research focuses on the application of operations research techniques to data mining challenges.  In addition to operations research and data mining, I hold an interest in the meaningful visualization of data.
+### Professional  
+I am a Research Engineer for the Air Force Research Lab Information Directorate.  My research focuses on the application of operations research techniques to data mining challenges.  In addition to operations research and data mining, I hold an interest in the meaningful visualization of data.
 
 ### Personal Interests  
 - Family
-- Running (860 miles so far in 2016)
-- Shooting pool
+- Running (1,085 miles so far in 2016)
+- Playing pool
 - Star Trek
 - Outdoors (hiking, skiing, fishing...)  
 

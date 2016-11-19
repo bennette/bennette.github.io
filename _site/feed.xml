@@ -4,13 +4,90 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://bennette.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://bennette.github.io" />
-<updated>2016-08-31T07:13:34-04:00</updated>
+<updated>2016-09-10T21:18:09-04:00</updated>
 <id>http://bennette.github.io/</id>
 <author>
   <name>Walter Bennette</name>
   <uri>http://bennette.github.io/</uri>
   <email>wdbennette@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Visualizing LSSU courses]]></title>
+  <link rel="alternate" type="text/html" href="http://bennette.github.io/LSSU%20Classes/" />
+  <id>http://bennette.github.io/LSSU Classes</id>
+  <published>2016-08-31T00:00:00-04:00</published>
+  <updated>2016-08-31T00:00:00-04:00</updated>
+  <author>
+    <name>Walter Bennette</name>
+    <uri>http://bennette.github.io</uri>
+    <email>wdbennette@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;By: Walter Bennette&lt;/p&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+&lt;p&gt;In this document I look at the course requirements of Lake Superior State University’s different degree programs. The purpose of this analysis is to provide insight to degree requirements and cross curriculum collaboration. The initial research for this analysis was provided by Collette Coullard and her class.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;*&lt;a href=&quot;/assets/lssu.pdf&quot;&gt;Click here for the PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://bennette.github.io/LSSU%20Classes/&quot;&gt;Visualizing LSSU courses&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://bennette.github.io&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on August 31, 2016.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A data driven stopping criterion for evolutionary instance selection]]></title>
+  <link rel="alternate" type="text/html" href="http://bennette.github.io/stoppingCriteria/" />
+  <id>http://bennette.github.io/stoppingCriteria</id>
+  <published>2016-07-21T00:00:00-04:00</published>
+  <updated>2016-07-21T00:00:00-04:00</updated>
+  <author>
+    <name>Walter Bennette</name>
+    <uri>http://bennette.github.io</uri>
+    <email>wdbennette@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;By: Walter Bennette&lt;/p&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+&lt;p&gt;Instance based classifiers, such as k-Nearest Neighbors, predict the class value of a new observation based on some distance or similarity measure between the new instance and the stored training data. However, due to the required distance calculations, classifying new instances becomes computationally expensive as the number of training observations increases. Therefore, instance selection techniques have been proposed to improve instance based classifiers by reducing the number of training instances that must be stored to achieve adequate classification rates. Al- though other methods exist, an evolutionary algorithm has been used for instance selection with some of the best results in regard to data reduction and preserva- tion of classification accuracy. Unfortunately, the performance of the evolutionary algorithm for instance selection comes at the cost of longer computation times in comparison to classic instance selection techniques. In this work we introduce a new stopping criterion for the evolutionary algorithm which depends on the conver- gence of its fitness function. Experimentation shows that the new criterion results in less computation time while achieving comparable performance.  &lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;*&lt;a href=&quot;/assets/evolutionaryStopping.pdf&quot;&gt;Click here for the PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://bennette.github.io/stoppingCriteria/&quot;&gt;A data driven stopping criterion for evolutionary instance selection&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://bennette.github.io&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on July 21, 2016.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Install RMySQL on Windows 7 for RStudio.]]></title>
+  <link rel="alternate" type="text/html" href="http://bennette.github.io/installRMySQL/" />
+  <id>http://bennette.github.io/installRMySQL</id>
+  <published>2015-01-02T00:00:00-05:00</published>
+  <updated>2015-01-02T00:00:00-05:00</updated>
+  <author>
+    <name>Walter Bennette</name>
+    <uri>http://bennette.github.io</uri>
+    <email>wdbennette@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;By: Walter Bennette&lt;/p&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+
+&lt;p&gt;RMySQL allows users to perform MySQL operations through R and RStudio. Unfortunately, the installation procedure is not extremely straight forward. The following guide is intended to help alleviate some of the confusion that novice users may have. This guide assumes that MySQL is not currently installed.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;*&lt;a href=&quot;/assets/How_to_Install_RMySQL.pdf&quot;&gt;Click here for the PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://bennette.github.io/installRMySQL/&quot;&gt;Install RMySQL on Windows 7 for RStudio.&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://bennette.github.io&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on January 02, 2015.&lt;/p&gt;</content>
+</entry>
 
 
   
@@ -31,9 +108,8 @@
 &lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
 &lt;p&gt;Aspects of a classifier’s training dataset can often make building a helpful and high accuracy classifier difficult. Instance selection addresses some of the issues in a dataset by selecting a subset of the data in such a way that learning from the reduced dataset leads to a better classifier. This work introduces an integer programming formulation of instance selection that relies on column generation techniques to obtain a good solution to the problem. Experimental results show that instance selection improves the usefulness of some classifiers by optimizing the training data so that that the training dataset has easier to learn boundaries between class values. Also included in this paper are two case studies from the Surveillance, Epidemiology, and End Results (SEER) database that further confirm the benefit of instance selection. Overall, results indicate that performing instance selection for a classifier is a competitive classification approach. However, it should be noted that instance selection might overfit classifiers that have already achieved a good fit to the dataset.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=4790&amp;amp;context=etd&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;*&lt;a href=&quot;http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=4790&amp;amp;context=etd&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://bennette.github.io/Instance%20selection%20for%20model-based%20classifiers/&quot;&gt;Instance selection for model-based classifiers&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://bennette.github.io&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on May 09, 2014.&lt;/p&gt;</content>
 </entry>
@@ -67,9 +143,9 @@ compared to decision trees with no prior simplification effort applied. We show 
 cases we are indeed able to identify important group of instances, and subsequently are able 
 to generate a high quality solution space for finding simplified decision trees. &lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=3100&amp;amp;context=etd&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;*&lt;a href=&quot;http://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=3100&amp;amp;context=etd&quot;&gt;Click here for the full article in PDF!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://bennette.github.io/Instance-selection-for-simplified-decision-trees-through-the-generation-and-selection-of-instance-candidate-subsets/&quot;&gt;Instance selection for simplified decision trees through the geneneration and selection of instance candidate subsets&lt;/a&gt; was originally published by Walter Bennette at &lt;a href=&quot;http://bennette.github.io&quot;&gt;small data&#58;<br>big benefit&lt;/a&gt; on May 09, 2011.&lt;/p&gt;</content>
 </entry>

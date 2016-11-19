@@ -8,4 +8,4 @@ image:
   feature: sault6.jpeg
 ---
 
-[PDF Version](/assets/resume.pdf)
+[PDF Version](/assets/cv.pdf)

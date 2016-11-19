@@ -3,6 +3,30 @@
   
   
   <url>
+    <loc>http://bennette.github.io/LSSU%20Classes/</loc>
+    
+    <lastmod>2016-08-31T00:00:00-04:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://bennette.github.io/stoppingCriteria/</loc>
+    
+    <lastmod>2016-07-21T00:00:00-04:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://bennette.github.io/installRMySQL/</loc>
+    
+    <lastmod>2015-01-02T00:00:00-05:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://bennette.github.io/Instance%20selection%20for%20model-based%20classifiers/</loc>
     
     <lastmod>2014-05-09T00:00:00-04:00</lastmod>
@@ -21,56 +45,56 @@
   
   <url>
     <loc>http://bennette.github.io/presentations/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://bennette.github.io/presentations/Teaching/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://bennette.github.io/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://bennette.github.io/articles/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <loc>http://bennette.github.io/about/</loc>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://bennette.github.io/presentations/Teaching/ENGR160/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://bennette.github.io/resume/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://bennette.github.io/presentations/Research/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://bennette.github.io/about/</loc>
-    <lastmod>2016-08-31T07:13:34-04:00</lastmod>
+    <loc>http://bennette.github.io/posts/</loc>
+    <lastmod>2016-09-10T21:18:09-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
